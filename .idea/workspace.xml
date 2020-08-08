@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d4b75499-10ec-4e82-8e6d-e66684dbf896" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/LeetCode$Main.ic" NAME="Main Coverage Results" MODIFIED="1591454035962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Sequence" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>condition</find>
+      <find>URI</find>
+      <find>str</find>
+      <find>edges</find>
+      <find>numberOfLeadingZeros</find>
+      <find>i</find>
+      <find>map</find>
+      <find>pending</find>
+      <find>defaultForkJoinWorkerThreadFactory</find>
+      <find>abstract</find>
+      <find>最后一张牌是i</find>
+      <find>离散化</find>
+      <find>uniq</find>
+      <find>prime</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/Kindergarten3692.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/luogu/P3287.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/MuddyFields2226.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/ShortestPairOfPaths3068.java" />
+        <option value="$PROJECT_DIR$/src/Test/Test.java" />
+        <option value="$PROJECT_DIR$/src/Test/SemaphoreTst.java" />
+        <option value="$PROJECT_DIR$/src/Test/Semaphore.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/MondriaanDream2411.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/TravelingbyStagecoach2686.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/WoodenSticks1065.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/WoodenSticks1065.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/DollarDayz3181.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/AntCounting3046.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/Palindrome1159.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/Palindrome1159.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/CheapestPalindrome3280.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/CheapestPalindrome3280.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/MilkingTime3616.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/MilkingTime3616.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/AppleCatching2385.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/AppleCatching2385.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/Sumsets2229.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/Sumsets2229.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/CowBowling3176.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/CowBowling3176.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/CommonSubsequence1458.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/CommonSubsequence1458.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/CharmBracelet3624.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/CharmBracelet3624.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/P3287.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/TheBattleofChibiUVA12983.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/RectangularCovering2836.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/MondriaanDream2411.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/Tour2677.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/TravelingbyStagecoach2686.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/HiewiththePie3311.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/KAnonymousSequence.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/CowExhibition2184.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/SpaceElevator2392.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/Coins1742.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/MakingtheGrade3666.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/Bridgingsignals1631.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/DollarDayz3181.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/AntCounting3046.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/poj/dp/SwapAndFlip.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/kaoshi/Test1.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/kaoshi/Test3.java" />
+        <option value="$PROJECT_DIR$/src/tiaozhanchengxujingsai/kaoshi/Test4.java" />
+        <option value="$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/kaoshi/Test4.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="601" />
+    <option name="y" value="70" />
+    <option name="width" value="1737" />
+    <option name="height" value="993" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultPlantUmlFileTemplate" value="UML Sequence" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596878785030" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xp\JavaProjects\LeetCode\src\xp\ld" />
+      <recent name="D:\xp\JavaProjects\LeetCode\src\xp" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xp\JavaProjects\LeetCode\src\tiaozhanchengxujingsai" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Firing2987" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xp.tiaozhanchengxujingsai.poj.Firing2987" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xp.tiaozhanchengxujingsai.poj.dp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="LeetCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoVisibility_Demonstration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NoVisibility_Demonstration" />
+      <module name="LeetCode" />
+      <option name="VM_PARAMETERS" value="-XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=print,*NoVisibility_Demonstration.run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xp.test.Test" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xp.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xp.tiaozhanchengxujingsai.kaoshi.Test1" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xp.tiaozhanchengxujingsai.kaoshi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.NoVisibility_Demonstration" />
+      <item itemvalue="Application.Firing2987" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.Test1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Firing2987" />
+        <item itemvalue="Application.NoVisibility_Demonstration" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4b75499-10ec-4e82-8e6d-e66684dbf896" name="Default Changelist" comment="" />
+      <created>1573963475802</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573963475802</updated>
+      <workItem from="1573963479725" duration="4231000" />
+      <workItem from="1574078530588" duration="5484000" />
+      <workItem from="1574175145775" duration="1208000" />
+      <workItem from="1574256975046" duration="5563000" />
+      <workItem from="1574515941148" duration="3462000" />
+      <workItem from="1574684762942" duration="6593000" />
+      <workItem from="1575122058212" duration="677000" />
+      <workItem from="1575380093953" duration="5714000" />
+      <workItem from="1575468935932" duration="1404000" />
+      <workItem from="1575553186030" duration="5764000" />
+      <workItem from="1575644072928" duration="1901000" />
+      <workItem from="1575697936415" duration="655000" />
+      <workItem from="1576238327509" duration="4542000" />
+      <workItem from="1576250343315" duration="1884000" />
+      <workItem from="1576582557739" duration="5576000" />
+      <workItem from="1576681239794" duration="2176000" />
+      <workItem from="1576758719584" duration="7877000" />
+      <workItem from="1577104750044" duration="6216000" />
+      <workItem from="1577278566092" duration="651000" />
+      <workItem from="1577706827056" duration="643000" />
+      <workItem from="1586226429888" duration="3609000" />
+      <workItem from="1586251082807" duration="10477000" />
+      <workItem from="1586356087730" duration="387000" />
+      <workItem from="1586390882366" duration="39672000" />
+      <workItem from="1586494445016" duration="35442000" />
+      <workItem from="1586583567945" duration="16204000" />
+      <workItem from="1586668892709" duration="15393000" />
+      <workItem from="1586756210385" duration="28735000" />
+      <workItem from="1586829167018" duration="7247000" />
+      <workItem from="1586920673503" duration="21282000" />
+      <workItem from="1587010375592" duration="28088000" />
+      <workItem from="1587097947635" duration="27789000" />
+      <workItem from="1587178792407" duration="2140000" />
+      <workItem from="1587190717252" duration="599000" />
+      <workItem from="1587353732298" duration="1563000" />
+      <workItem from="1587436664515" duration="26335000" />
+      <workItem from="1587522651846" duration="26552000" />
+      <workItem from="1587621979851" duration="17436000" />
+      <workItem from="1587713027151" duration="19277000" />
+      <workItem from="1587810137834" duration="9567000" />
+      <workItem from="1587865943149" duration="72644000" />
+      <workItem from="1588124681547" duration="30956000" />
+      <workItem from="1588219064652" duration="24986000" />
+      <workItem from="1588303946397" duration="8205000" />
+      <workItem from="1588328418036" duration="5303000" />
+      <workItem from="1588340952176" duration="6286000" />
+      <workItem from="1588384268222" duration="1883000" />
+      <workItem from="1588397725760" duration="8940000" />
+      <workItem from="1588429523488" duration="2963000" />
+      <workItem from="1588490346772" duration="6822000" />
+      <workItem from="1588505921359" duration="12197000" />
+      <workItem from="1588558032216" duration="54510000" />
+      <workItem from="1588812681509" duration="39755000" />
+      <workItem from="1588898296053" duration="17165000" />
+      <workItem from="1588916240030" duration="47474000" />
+      <workItem from="1589027131355" duration="5002000" />
+      <workItem from="1589075422491" duration="21847000" />
+      <workItem from="1589160246143" duration="45318000" />
+      <workItem from="1589243972964" duration="25033000" />
+      <workItem from="1589333200616" duration="27463000" />
+      <workItem from="1589423588228" duration="18269000" />
+      <workItem from="1589504058327" duration="15906000" />
+      <workItem from="1589549277205" duration="10335000" />
+      <workItem from="1589592881542" duration="28468000" />
+      <workItem from="1589627219047" duration="1232000" />
+      <workItem from="1589637597136" duration="7908000" />
+      <workItem from="1589645676228" duration="73000" />
+      <workItem from="1589684250625" duration="4497000" />
+      <workItem from="1589762701095" duration="38235000" />
+      <workItem from="1589847673797" duration="14959000" />
+      <workItem from="1589870636530" duration="599000" />
+      <workItem from="1589872559419" duration="5058000" />
+      <workItem from="1589940156171" duration="7554000" />
+      <workItem from="1590026594119" duration="22092000" />
+      <workItem from="1590112664767" duration="9079000" />
+      <workItem from="1590152911215" duration="4776000" />
+      <workItem from="1590198720201" duration="47127000" />
+      <workItem from="1590373382522" duration="5406000" />
+      <workItem from="1590391318979" duration="10670000" />
+      <workItem from="1590464737080" duration="50187000" />
+      <workItem from="1590630559182" duration="19536000" />
+      <workItem from="1590732696223" duration="12990000" />
+      <workItem from="1590914325882" duration="5510000" />
+      <workItem from="1590976533989" duration="24895000" />
+      <workItem from="1591150065469" duration="13192000" />
+      <workItem from="1591275840072" duration="8685000" />
+      <workItem from="1591316777079" duration="24223000" />
+      <workItem from="1591447210954" duration="7836000" />
+      <workItem from="1591500380528" duration="17978000" />
+      <workItem from="1591577429339" duration="11851000" />
+      <workItem from="1591664579881" duration="31027000" />
+      <workItem from="1591836506468" duration="4491000" />
+      <workItem from="1591866484059" duration="11026000" />
+      <workItem from="1592573237798" duration="78000" />
+      <workItem from="1592573677522" duration="2486000" />
+      <workItem from="1594912680089" duration="4773000" />
+      <workItem from="1595737713845" duration="3366000" />
+      <workItem from="1596867249935" duration="9589000" />
+      <workItem from="1596876983178" duration="32000" />
+      <workItem from="1596877540421" duration="1146000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1391907000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="601" y="70" width="1737" height="993" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49625936" visible="true" weight="0.22989875" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Structure" order="5" sideWeight="0.50374067" side_tool="true" weight="0.25240055" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.16685979" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30475086" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30243337" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.73580533" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3221154" />
+      <window_info anchor="bottom" id="GraphQL" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.21262003" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="PlantUML" order="9" weight="0.6021948" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32921812" />
+      <window_info anchor="right" x="0" y="0" width="329" height="732" id="Documentation" order="11" side_tool="true" type="SLIDING" weight="0.21879287" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/xp/ld/LeetCode300.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/KAnonymousSequence.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/DNARepair.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/xp/ld/Lanqiao3.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/Firing2987.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/../../jdk/jdk-12.0.1/lib/src.zip!/java.base/java/util/concurrent/Semaphore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="656" column="13" selection-start-line="656" selection-start-column="13" selection-end-line="656" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/WoodenSticks1065.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding>
+            <element signature="e#2186#2187#0" expanded="true" />
+            <element signature="e#2224#2225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/Palindrome1159.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/CheapestPalindrome3280.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/MilkingTime3616.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          <folding>
+            <element signature="e#1509#1510#0" expanded="true" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1712#1713#0" expanded="true" />
+            <element signature="e#1762#1763#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/AppleCatching2385.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/Sumsets2229.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/CowBowling3176.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/CommonSubsequence1458.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/CharmBracelet3624.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/FaceTheRightWay3276.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/Fliptile3279.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/RectangularCovering2836.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/MondriaanDream2411.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/Tour2677.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="13" column="144" selection-start-line="13" selection-start-column="144" selection-end-line="13" selection-end-column="144" />
+          <folding>
+            <element signature="e#2303#2304#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/TravelingbyStagecoach2686.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/HiewiththePie3311.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/KAnonymousSequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding>
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/CowExhibition2184.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <element signature="e#2501#2502#0" expanded="true" />
+            <element signature="e#2539#2540#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/SpaceElevator2392.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+          <folding>
+            <element signature="e#2393#2394#0" expanded="true" />
+            <element signature="e#2431#2432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/Coins1742.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding>
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#240#241#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/Bridgingsignals1631.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/DollarDayz3181.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/AntCounting3046.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/P3287.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/SwapAndFlip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/OutofHay2395.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="117" column="17" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/TheBattleofChibiUVA12983.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="79" column="5" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="79" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="33" selection-start-line="19" selection-start-column="3" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/kaoshi/Test3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/GCDLCMInverse2429.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/poj/dp/MakingtheGrade3666.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="976">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/kaoshi/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/kaoshi/Test4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/MobiusInverion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/NoVisibility_Demonstration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/PopularCows.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/RongchiPrinciple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/Sudoku.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/AnniversaryParty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/BusiestDay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/COWListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/DNARepair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/Euclid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/HousewifeWind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/ISAP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/Knight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/LargestRectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xp/tiaozhanchengxujingsai/LinkedSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

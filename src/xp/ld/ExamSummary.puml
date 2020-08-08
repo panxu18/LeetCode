@@ -1,0 +1,34 @@
+@startuml
+
+
+participant "用户空间" as user
+participant "内核空间" as kernel
+participant "文件" as file
+title 传统读写方式
+file -> kernel: 文件拷贝到内核（DMA）
+kernel -> user: 文件拷贝到用户空间（CPU）
+user -> kernel: 数据拷贝到内核（CPU）
+kernel -> file: 数据拷贝到文件（DMA）
+
+
+newpage mmap调用
+
+user -> kernel: mmap调用
+file -> kernel: 文件拷贝到内核（DMA）
+user -> kernel: write调用
+kernel -> kernel: 拷贝到其他内核其他位置（CPU）
+kernel -> file: 数据通过DMA拷贝到文件（DMA）
+
+newpage sendfile调用
+user -> kernel: sendfile调用
+file -> kernel: 文件拷贝到内核（DMA）
+kernel -> kernel: 拷贝到其他内核其他位置（CPU）
+kernel -> file: 数据通过DMA拷贝到文件（DMA）
+
+newpage splice调用
+user -> kernel: splice调用
+file -> kernel: 文件拷贝到内核（DMA）
+kernel -> kernel: 建立两个内核区域之间的管道
+kernel -> file: 数据通过DMA拷贝到文件（DMA）
+
+@enduml
