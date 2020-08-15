@@ -1,27 +1,25 @@
-package xp.pan;
+package xp.DL;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Test3 {
 
-    private static int N, M;
-    private static final int[] par = new int[100005];
+    private static final int[] p = new int[100005];
     private static final int[] rank = new int[100005];
-    private static final HashMap<Integer, ArrayList<Integer>> map = new HashMap<Integer, ArrayList<Integer>>();
+    private static final HashMap<Integer, ArrayList<Integer>> map = new HashMap<>();
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        N = scan.nextInt();
-        M = scan.nextInt();
+        int n = scan.nextInt();
+        int m = scan.nextInt();
         init();
-        for (int i = 0; i < M; i++) {
+        for (int i = 0; i < m; i++) {
             int a = scan.nextInt();
             int b = scan.nextInt();
-            union(a, b);
+            u(a, b);
         }
 
-        for (int i = 1; i <= N; i++) {
+        for (int i = 1; i <= n; i++) {
             int p = find(i);
             if (map.containsKey(p)) {
                 map.get(p).add(i);
@@ -44,23 +42,16 @@ public class Test3 {
         }
     }
 
-    private static void init() {
-        for (int i = 0; i < par.length; i++) {
-            par[i] = i;
-        }
-        Arrays.fill(rank, 0);
-    }
-
-    private static void union(int x, int y) {
+    private static void u(int x, int y) {
         int px = find(x);
         int py = find(y);
         if (px == py) {
             return;
         }
         if (rank[x] < rank[y]) {
-            par[px] = py;
+            p[px] = py;
         } else {
-            par[py] = px;
+            p[py] = px;
             if (rank[px] == rank[py]) {
                 rank[px]++;
             }
@@ -68,10 +59,14 @@ public class Test3 {
     }
 
     private static int find(int x) {
-        return par[x] == x ? x : (par[x] = find(par[x]));
+        if (p[x] == x) return x;
+        return p[x] = find(p[x]);
     }
 
-    private static boolean isSame(int x, int y) {
-        return find(x) == find(y);
+    private static void init() {
+        for (int i = 0; i < p.length; i++) {
+            p[i] = i;
+        }
+        Arrays.fill(rank, 0);
     }
 }
