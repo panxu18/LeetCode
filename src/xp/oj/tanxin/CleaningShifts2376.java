@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.tanxin;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,17 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+/**
+ * 贪心，最大区间覆盖
+ *
+ * 问题描述
+ * 在一维坐标轴上，给定若干个区间，选择最少的区间覆盖整个坐标轴。
+ * 问题分析
+ * 第一步，选择能覆盖到坐标0，且结束坐标最大的区间，如果选择的区间为[li,ri]，那么第二步选择能覆盖到ri+1，且结束坐标最大
+ * 的区间。依次进行下去直到所有坐标被覆盖。
+ * 对坐标s，只有左边界小于等于s的区间能覆盖s，从中找到右边界最大的区间t，如果t小于s说明没有区间能覆盖到坐标s，
+ * 如果能覆盖s，则更新s为下一个需要覆盖的坐标即t+1。直到所有区间遍历完或者所有坐标都被覆盖结束。
+ */
 public class CleaningShifts2376 {
 
     public static void main(String[] args) throws IOException {

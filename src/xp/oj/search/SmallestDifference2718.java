@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,15 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+/**
+ * 全排列，特判
+ * 问题描述
+ * 给出一个数组只包含0-9，不重复，元素分为两部分，计算两个部分全排列数值绝对值差的最小值。除了0之外不允许出现前导0。
+ * 问题分析
+ * 计算全排列，然后选择分割点计算两部分的绝对值差。注意长度为10时会超时，所以直接输出长度为10的结果，另外对于长度为2，
+ * 且有一个为0的输入，直接输出另外一个值。
+ * 这里使用字典序全排列，通过将当前数组转化为一个刚好字典序比其大的数组，得到下一个排列。
+ */
 public class SmallestDifference2718 {
 
     public static void main(String[] args) throws IOException {

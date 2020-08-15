@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,6 +6,16 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
+/**
+ * 搜索回溯
+ *
+ * 问题描述
+ * 打冰球。冰球可以往上下左右4个方向走，只有当冰球撞到墙时才会停下来，而墙会消失。当冰球紧贴墙时，
+ * 不能将冰球往那个方向打。冰球出界就当输，超过10次还没将冰球打到目标位置也当输。求用最小次数将冰球打到目标位置，
+ * 或输出-1表示输了。
+ * 问题分析
+ * 使用DFS回溯搜索，直到找到目标点。使用迭代加深没有明显提高算法效率。
+ */
 public class Curling3009 {
 
     public static void main(String[] args) throws IOException {

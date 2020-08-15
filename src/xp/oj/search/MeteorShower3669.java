@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,6 +9,17 @@ import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+/**
+ *  宽搜
+ *
+ *  问题描述
+ * 巨大流星雨即将袭来。每个流星会对击中的地方以及周围（上下左右四格）造成破坏。Bessie开始时位于（0, 0）位置，
+ * 并希望逃到一处不会被袭击到的地方（在第一象限内）。已知每移动一格需要1个时间单位，被流星破坏后的地方不能再进入。
+ * 给出M个流星在T时刻击中的地方（X, Y），问Bessie能否逃到安全的地方，若能输出最短时间，否则输出-1。
+ * 问题分析
+ * 安全点表示最终没有被流星破坏的坐标，因此首先要确定每个坐标被流星破坏的时间，然后从起点开始搜索，要计算到达某个坐标的
+ * 最短时间，所以使用BFS搜索。使用A*算法没有明显提高效率。
+ */
 public class MeteorShower3669 {
     public static void main(String[] args) throws IOException {
         new MeteorShower3669().solve();

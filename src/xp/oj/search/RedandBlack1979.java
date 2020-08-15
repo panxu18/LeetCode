@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,6 +6,15 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
+/**
+ * 深搜
+ *
+ * 问题描述
+ * 一个人在房间的@处，房间里铺设着红色和黑色的瓷砖，这个人只准走黑色的瓷砖，不能走红色的瓷砖黑色的瓷砖用‘.’表示，
+ * 红色的瓷砖用'#'表示，求这个人可以走多少个瓷砖。
+ * 问题分析
+ * 从开始点的4个方向进行dfs。
+ */
 public class RedandBlack1979 {
     public static void main(String[] args) throws IOException {
         new RedandBlack1979().solve();

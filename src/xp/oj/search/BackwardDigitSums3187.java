@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,6 +6,15 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
+/**
+ * 全排列,杨辉三角
+ *
+ * 问题描述
+ * 1-N的全排列的和相邻两个数相加，直到合并为一个数，求和为指定值的最小排列。
+ * 问题分析
+ * 全排列数组，然后利用杨辉三角的系数判断是否和是否为给定值。
+ * 杨辉三角单独一行的系数符合二项展开式的系数，也就是二项式系数的三角形表示。
+ */
 public class BackwardDigitSums3187 {
 
     public static void main(String[] args) throws IOException {

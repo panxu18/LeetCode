@@ -1,4 +1,4 @@
-package xp.oj;
+package xp.oj.tanxin;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,6 +6,15 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
+/**
+ * 贪心
+ *
+ * 问题描述
+ * 有十个数，判断是否能分成两个递增序列。
+ * 问题分析
+ * 可以使用搜索，这里是贪心，假设前i个数已经得到两个递增数组，第i+1个数加入肯定选择最后一个数比较大的数组，这样后面较小
+ * 的数才能添加到另外一个数组。
+ */
 public class Ball_A0033 {
 
     public static void main(String[] args) throws IOException {

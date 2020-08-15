@@ -1,10 +1,19 @@
-package xp.oj.poj;
+package xp.oj.search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
+/**
+ * 深度优先搜索
+ *
+ * 问题描述
+ * 在一个地图上有一些小水坑，用矩阵表示这个地图，用W表示某个位置被水坑覆盖，用.表示没有水坑覆盖。
+ * 两个有水的位置如果在八个方向上相邻，则属于同一个水坑的。计算地图中有多少个水坑。
+ * 问题分析
+ * DFS遍历地图，一次查找一个联通的水坑。DFS的次数就是水坑个数。
+ */
 public class LakeCounting2386 {
 
     public static void main(String[] args) {

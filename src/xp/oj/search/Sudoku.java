@@ -1,4 +1,4 @@
-package xp.oj;
+package xp.oj.search;
 
 import java.io.*;
 import java.util.Arrays;

@@ -1,9 +1,18 @@
-package xp.oj.poj;
+package xp.oj.search;
 
 import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+/**
+ * 宽搜
+ *
+ * 问题描述
+ * 求5*5的迷宫中从左上角到右下角最少要移动多少次，每次只能向上或向下移动一格。
+ * 问题分析
+ * BFS每一层代表移动一次，最早到达终点的肯定是最短路径。同一个位置第一次访问才可能最快到达终点，
+ * 所以每个位置只能访问一次。
+ */
 public class MiGong3894 {
 
     public static void main(String[] args) {

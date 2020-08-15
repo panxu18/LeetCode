@@ -1,9 +1,16 @@
-package xp.oj.poj;
+package xp.oj.tanxin;
 
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * 贪心，最大区间覆盖
+ * 问题描述
+ * x轴上有n个坐标，每个坐标可以覆盖到周围半径为r的区域，选择最少的坐标使全部坐标被覆盖。
+ * 问题分析
+ * 使用贪心策略每次选择尽可能远的坐标使前面的区域都被覆盖。
+ */
 public class SarumanArmy3069 {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,14 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.StringTokenizer;
 
+/**
+ * 深搜
+ *
+ * 问题描述
+ * 在5*5的矩阵中，从某一坐标开始移动5次构成一个6位数，就算可以得到多少个不同的数。
+ * 问题分析
+ * 深搜+set
+ */
 public class Hopscotch3050 {
 
     public static void main(String[] args) throws IOException {
