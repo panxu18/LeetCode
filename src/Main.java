@@ -1,5 +1,3 @@
-package xp;
-
 import java.io.*;
 
 public class Main {
