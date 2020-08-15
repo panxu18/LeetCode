@@ -1,10 +1,23 @@
-package xp.oj.poj;
+package xp.string;
 
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
+/**
+ * 后缀数组
+ *
+ * 问题描述
+ * 长度为n的序列，分为三段，每段都进行翻转，求翻转后最小的序列。其中原序列中任意一个元素都比第一个元素小。
+ *
+ * 问题分析
+ * 因为任意元素都比第一个元素小，所以第一段翻转后对序列的大小影响最大，因此需要先求出翻转之后最小的第一段。剩下两段翻
+ * 转之后两部分会相互影响，所以不能单独考虑某一段，需要考虑所有翻转方案。
+ * 对于第一段来说，求翻转之后的最小序列，即求翻转之后最小后缀，就是将所有后缀进行排序，取最小的后缀。
+ * 对于后面两段，翻转之后的结果可以参考循环右移算法，将序列拼接之后再翻转的序列称为S，S中间一段就是两段子串分别翻转的结
+ * 果。所以只要求S中跨过中间点的最小后缀，虽然只用比较长度为原序列长度，但是比较S的整个后缀也不会影响正确性。
+ */
 public class Sequence3581 {
 
     public static void main(String[] args) {
