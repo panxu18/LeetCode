@@ -9,6 +9,15 @@ import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 素数打表，字符修改代价
+ *
+ * 问题描述
+ * 给一个4位数的素数，将其修改为另外一个4位数的素数。每次操作只能修改一位，且修改后的数也是素数，计算需要操作多少次。
+ * 问题分析
+ * 计算两个素数之间的距离，将两两相差1位的素数建立一条边，那么两个素数之间的距离就可以通过图上的路径表示。这里只需要求两个素数的距离，通过BFS可以搜索到两个顶点的最短路径。
+ * 注意点：修改某一位时少些了一个等号orz。
+ */
 public class PrimePath3126 {
 
     public static void main(String[] args) throws IOException {

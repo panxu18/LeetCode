@@ -9,6 +9,15 @@ import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.StringTokenizer;
 
+/**
+ * 大整数分解，pollard-rho算法
+ *
+ * 问题描述
+ * 给两个数的gcd和lcm，反求最小的两个数。
+ * 问题分析
+ * 假设a、b的gcd为g，lcm为l，有a = m*g，b = n*g, n*m = l/g，于是问题变为求n和m。由整数分解的唯一性可以得到l/g可以分解为若干个素数的幂方积，即p1^a1 * p2^a2...* pn^an。由于n和m互质所以，就是将p1、p2...pn成两部分使其和最小。
+ * 注意点：题目中是多case，需要判断EOF；普通的整数分解会超时，需要使用pollard-rho算法
+ */
 public class GCDLCMInverse2429 {
 
     public static void main(String[] args) throws IOException {
