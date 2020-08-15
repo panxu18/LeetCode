@@ -1,10 +1,18 @@
-package xp.oj.luogu;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
 
 import static java.lang.Math.min;
 
+/**
+ * 分配问题，km算法
+ *
+ * 问题描述
+ * 有N个工人N种任务，每个人做每一种任务的耗时不同，计算最少和最多要花多长时间。
+ * 问题分析
+ * KM裸题
+ */
 public class P4014 {
 
     public static void main(String[] args) throws IOException{

@@ -1,9 +1,20 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
 import java.util.LinkedList;
 
+/**
+ * 最小顶点覆盖, 指派问题
+ *
+ * 问题描述
+ * 有一个N*M的房间，外墙上有若干个门，屋内的人只能一个接一个的从某一个门中出去，计算所有人从屋里出去至少要多长时间。
+ * 问题分析
+ * 问题可以看成一个指派问题，每个门每个时间点只能出去一个人，假设最大的时间为T，那么一共有T*N个门和时间点的二元对，
+ * 所有人在这些二元对中选择一个。每个人到每个门的距离也要考虑进去，某个人只能在t时间之后才能到达某个门。二分图匹配问题，
+ * 可以一边建图一边匹配，只要新添加的边都是和为遍历的顶点相连。
+ *
+ */
 public class Evacuation3057 {
 
     public static void main(String[] args) throws IOException {

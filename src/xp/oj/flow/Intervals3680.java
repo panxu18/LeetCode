@@ -1,10 +1,19 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
 
 import static java.lang.Math.min;
 
+/**
+ * 最小费用流，坐标离散化
+ *
+ * 问题描述
+ * 给N个带权的开区间，i号区间覆盖（ai,bi),权重为wi，先要从中选取一些区间，要求任意点都不被覆盖超过K次，计算最大权重和。
+ * 问题分析
+ * 把区间看成流量为1的流，当区间不重合时，这两个流是同一个流量为1的流。因此如果出现流量为K的流就说明有区间重叠了K次。因此问题变为计算求最大流量为K时的最大权重。
+ * 因为区间范围比较大，所以需要离散化坐标。
+ */
 public class Intervals3680 {
 
     public static void main(String[] args) throws IOException {

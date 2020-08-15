@@ -1,8 +1,18 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
 
+/**
+ * 关键边, 完全匹配
+ *
+ * 问题描述
+ * 有N个矩形，矩形之间有重叠，有N个数在这些矩形区域内，现在将矩形和数字一一对应，保证对应关系唯一。
+ * 问题分析
+ * 不太理解题目意思，看了题解之后发现是将矩形和数字对应，而且不能出现模棱两可的对应关系，例如样例2中就无法唯一确定，矩形A可以和数字1或数字2对应时，矩形B都可以和另外一个数字对应，这就没有确定唯一的对应关系。样例1中，A必须对应4，如果A不对应4，那么剩下的矩形和数字无法一一对应。
+ * 根据上面分析也可以发现，如果删除A和4的对应关系，图就无法完全匹配，就表示A和4的对应关系可以唯一确定下来。因此，算法也是采用这样的枚举策略，依次删除一条边，判断图是否能完全匹配，如果能完全匹配，表示该边是关键边。
+ * 初始化偷懒导致无限wa
+ */
 public class SortingSlides1486 {
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
     PrintWriter out = new PrintWriter(System.out);

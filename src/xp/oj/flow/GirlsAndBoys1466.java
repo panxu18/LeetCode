@@ -1,8 +1,16 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
 
+/**
+ *  最大独立集
+ *
+ *  问题描述
+ * 有一群学生，其中一些男孩和女孩之间有联系，计算相互之间都没有联系的最大群体。
+ * 问题分析
+ * 该问题是最大独立集问题，二分图的最大独立集=顶点数-最小点覆盖
+ */
 public class GirlsAndBoys1466 {
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
     PrintWriter out = new PrintWriter(System.out);

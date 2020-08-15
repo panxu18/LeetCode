@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
@@ -6,6 +6,16 @@ import java.util.LinkedList;
 
 import static java.lang.Math.min;
 
+/**
+ * 最大流
+ * 问题描述
+ * 每头牛都有喜欢的食物和饮料，现在有一些食物和饮料分配给这些牛，最多有多少头牛可以得到喜欢的食物和饮料。
+ * 问题分析
+ * 这里有三种实体无法实现二分图，如果把食物和饮料作为一个实体，那么会有重复使用的可能。如果每头牛都只有一种喜欢的食物
+ * 和饮料，则可以将牛作为食物和饮料的边，然后计算二分图的最小顶点覆盖。但是这里也没有这个条件，为了限制每头牛只能选择一
+ * 对食物和饮料，可以通过流量控制。把食物和饮料的边拆分成食物和牛，牛和饮料的连接，并且使用两个点表示牛，它们之间的流量
+ * 限制为1（这里用只有一条边表示）。
+ */
 public class Dining3281 {
     public static void main(String[] args) throws IOException {
         new Dining3281().solve();

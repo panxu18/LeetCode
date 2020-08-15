@@ -1,8 +1,17 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
 
+/**
+ * 二分图最小顶点覆盖
+ *
+ * 问题描述
+ * 有一个N*N的网格，网格中有一些障碍物，每次选择一行或者一列清除该行该列的所有障碍物。至少要选择多少障碍物。
+ * 问题分析
+ * 两种方向，一是将行和列分别于障碍物建边，然后选择最少的行和列是所有的障碍物都被覆盖，这就成了一个集合覆盖问题，
+ * 没办法求解。第二就是将障碍物作为该行和该列的一条边，问题就变成了二分图的最小顶点覆盖。
+ */
 public class Asteroids3041 {
 
     public static void main(String[] args) throws IOException {

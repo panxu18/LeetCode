@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Arrays;
 import static java.lang.Math.max;
 
 /**
- * 指派问题, KM算法
+ * 指派问题, KM算法, 最大带权匹配
  *
  * 问题描述
  * 有N个玩具，M个工厂，j号工厂加工i号玩具的时间为Zij，同一个工厂同一时间只能加工一个玩具，计算加工所有玩具的最小时间。

@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
@@ -6,6 +6,14 @@ import java.util.LinkedList;
 
 import static java.lang.Math.min;
 
+/**
+ * 最小费用流
+ *
+ * 问题描述
+ * 类似tsp问题，从起点出发到达一个目的地，然后在返回起点，中间不能经过相同的道路。
+ * 问题分析
+ * 往返可以看成从起点到目的地的两条路径，所以问题就是计算流量为2的最小费用。
+ */
 public class FarmTour2135 {
 
     public static void main(String[] args) throws IOException {

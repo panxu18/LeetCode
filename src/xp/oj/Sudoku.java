@@ -4,6 +4,9 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+/**
+ * DLX算法
+ */
 public class Sudoku {
 
     public static void main(String[] args) {

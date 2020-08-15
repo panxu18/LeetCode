@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
@@ -7,6 +7,16 @@ import java.util.LinkedList;
 import static java.lang.Integer.MAX_VALUE;
 import static java.lang.Math.min;
 
+/**
+ * 最短权闭合子图，最小割
+ *
+ * 问题描述
+ * 公司要裁员，裁掉第i个员工获得收益为pi，裁掉一个员工后他的下级员工也要一起裁掉，计算最少裁掉多少人能够达到最大收益。
+ * 问题分析
+ * 这个问题属于最大权闭合子图，从源点连接一条边到点权为正的顶点，边的容量为点权的大小，从点权为负的顶点连一条边到汇点，
+ * 边的容量为点权的绝对值，从上级顶点向下级顶点建立一条容量为无限大的边。最大权=正权之和-最小割，最少顶点数=s割中的顶
+ * 点数。
+ */
 public class Firing2987 {
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
     PrintWriter out = new PrintWriter(System.out);

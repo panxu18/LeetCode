@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
@@ -6,6 +6,14 @@ import java.util.LinkedList;
 
 import static java.lang.Math.min;
 
+/**
+ * 最小割
+ * 问题描述
+ * 双核cpu核A和核B，有一批任务，将每个任务在不同cpu上运算的时间不同，有M个任务之间需要通信，如果两个任务在同一个核上执行没有通信开销，否则会有一定的开销。计算如何安排这批任务使运算时间最短。
+ * 问题分析
+ * 建图使用最小割算法。
+ * 注意跨cpu的两个任务之间需要建两条边，也就是往返都有容量。
+ */
 public class DualCoreCPU3469 {
     public static void main(String[] args) throws IOException{
         new DualCoreCPU3469().solve();

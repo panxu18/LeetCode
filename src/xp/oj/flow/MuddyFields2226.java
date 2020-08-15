@@ -1,8 +1,18 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
 
+/**
+ * 最小顶点覆盖
+ *
+ * 问题描述
+ * 给一个矩形地图，其中*表示水坑，.表示草地，现在可以使用宽度为1长度无限长的的木板覆盖水坑，但是要求不能覆盖草地，
+ * 计算至少需要多少块木板。
+ * 问题分析
+ * 题目类似于摧毁小行星，区别在于不能选择一整行或者一整列，所以这里对一行中连续的区域进行编号，每一列中连续的区域编号，
+ * 这样每个坐标肯定属于两个编号，后面就是计算最小顶点覆盖。
+ */
 public class MuddyFields2226 {
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
     PrintWriter out = new PrintWriter(System.out);
