@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.shulun;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,14 @@ import java.io.PrintWriter;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 快速幂
+ *
+ * 问题描述
+ * 给一个序列，包含多个<ai,bi>，计算所有ai^bi的和的模。
+ * 问题分析
+ * 快速幂裸题
+ */
 public class RaisingModuloNumbers1995 {
 
     public static void main(String[] args) throws IOException {

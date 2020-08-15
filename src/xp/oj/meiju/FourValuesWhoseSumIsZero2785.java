@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.meiju;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,15 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 枚举, 4数和为0
+ *
+ *  问题描述
+ * 给4个长度为N的数组，在这4个数组中分别取一个数字，计算有多少种组合使4个数的和为0。同一数组中相同值的数，认为不同数。
+ * 问题分析
+ * 一共有N^4种组合，如果考虑先将两个数组合并，一共有N^2种组合，然后枚举另外2个数组，在N^2种数字中查找一个数使四个数
+ * 和为0，查找一个数的时间复杂度为O(logn)。
+ */
 public class FourValuesWhoseSumIsZero2785 {
 
     public static void main(String[] args) throws IOException, NoSuchFieldException, IllegalAccessException {

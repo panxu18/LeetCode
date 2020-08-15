@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.shulun;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,15 @@ import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.StringTokenizer;
 
+/**
+ * 循环小数
+ *
+ * 问题描述
+ * 给一个一个无限循环小数，计算其分数形式。
+ * 问题分析
+ * 循环小数可以分为两部分，不循环部分和循环部分，假设不循环部分的长度为k，循环部分的循环节为c。假设循环小数可以通过分数a/b表示，10^c * a/b - a/b可以将循环部分去掉。为了使最后结果为整数，再同乘10^k。最终可以得到 10^k *(10^c - 1) * a/b = 全部位数的值-不循环位数的值。
+ * 注意点：题目没有给出循环节的长度，所以枚举所有长度。
+ */
 public class DeadFraction1930 {
 
     public static void main(String[] args) throws IOException {

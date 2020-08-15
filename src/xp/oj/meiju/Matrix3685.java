@@ -1,7 +1,15 @@
-package xp.oj.poj;
+package xp.oj.meiju;
 
 import java.io.*;
 
+/**
+ * 二分枚举，一元二次方法
+ *
+ * 问题描述
+ * 矩阵中每个位置的值为i^2 + 100000 × i + j^2 - 100000 × j + i × j，寻找矩阵中第M小的数。
+ * 问题分析
+ * 枚举第M小的数，check时因为每列的数据单调增，所以可以通过二分查找，或者解方程找到每列有多少个数不大于M。
+ */
 public class Matrix3685 {
 
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));

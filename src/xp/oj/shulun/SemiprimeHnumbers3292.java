@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.shulun;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,16 @@ import java.io.PrintWriter;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 伪素数打表
+ *
+ * 问题描述
+ * 定义一种数H满足4n+1，定义H-prime为H集合内的质数（即不考虑集合H之外的因子），定义H-SemiPrime为两个H-prime的乘积。
+ * 计算H-SemiPrime的个数。
+ * 问题分析
+ * 题目给的数据域不是正整数，而是4n+1的正整数，因此首先打表筛选出数据域H内的数，然后在使用素数筛选法打表标记H数据域内的
+ * 素数。筛选semiprime可以再次使用素数筛选法，再标记为非素数时，检测是否为semiprime。
+ */
 public class SemiprimeHnumbers3292 {
 
     public static void main(String[] args) throws IOException {

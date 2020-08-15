@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.shulun;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,14 @@ import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.StringTokenizer;
 
+/**
+ * 快速素数检测
+ *
+ * 问题描述
+ * 对于素数p一定有a^p%p=a,但是有商量合数也满足前面的等式，这种数称为伪素数。给定一个数判断是否是伪素数。
+ * 问题分析
+ * 首先判断是否是素数，利用miller-rabin算法检测素数，然在利用公式判断是否是伪素数。
+ */
 public class PseudoprimeNumbers3641 {
     public static void main(String[] args) throws IOException {
         new PseudoprimeNumbers3641().solve();

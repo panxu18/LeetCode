@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.shulun;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,20 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 素数打表
+ *
+ * 问题描述
+ * 给一个数X,X的所有约数（不含1），从中选择一个子序列，子序列中前一个数能整除后面一个数。计算最长的子序列长度，
+ * 以及这样的最长子序列有多少个。
+ * 问题分析
+ * 如果使用dp的思路来解，计算以某个正约数结尾的子序列的最大长度dp1[i]以及序列个数dp2[i]。那么dp1[i] = max{dp1[j]}
+ * 其中j整除i；dp2[i]=sum(dp2[j])其中dp1[j] = dp1[i] -1。所有需要计算arr[i]的所有正约数，枚举arr[i]的正约数时间复杂度
+ * 为O(n^1/2)。可以如果已经计算了arr[i]的所有质因数，那么只用枚举arr[i]/pi即可，其中pi为arr[i]的质因数。
+ * 实现上面的dp代码之后会超时，因为是多case，每次都要重新计算一遍上面的步骤。考虑dp[i]只与其正约数有关，和它是是谁的约数
+ * 无关，所以使用素数筛选法打表。有两种打表方式：1、直接打表，计算每个数的所有约数；2、如果将素数筛选出来之后，
+ * 每个数只用计算素数倍数的值。
+ */
 public class XfactorChains3421 {
 
     public static void main(String[] args) throws IOException {
