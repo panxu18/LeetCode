@@ -3,6 +3,14 @@ package xp.oj.poj;
 import java.io.*;
 import java.util.Arrays;
 
+/**
+ * 矩阵快速幂
+ *
+ * 问题描述
+ * 给一个矩阵A，计算矩阵前K次方的和。
+ * 问题分析
+ * 根据公式分析可以得到S[n] = A*S[n-1] + A,这是包含常数的递推式，可以写成矩阵形式。
+ */
 public class MatrixPowerSeries3233 {
     public static void main(String[] args) throws IOException {
         new MatrixPowerSeries3233().solve();

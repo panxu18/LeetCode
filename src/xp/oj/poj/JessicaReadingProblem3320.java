@@ -9,6 +9,13 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.TreeMap;
 
+/**
+ * 尺取法
+ * 问题描述
+ * 有本书，每一页一个知识点，知识点会重复出现，通过阅读最少的连续页学习到所有至少点。
+ * 问题分析
+ * 从第i页开始阅读，直到学习全部知识点。然后去掉i页的知识点，从i+1开始，直到学习所有知识点。
+ */
 public class JessicaReadingProblem3320 {
 
     public static void main(String[] args) throws IOException {

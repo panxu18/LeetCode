@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,6 +9,15 @@ import java.util.NoSuchElementException;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+/**
+ * 单源最短路径，反向边，dijkstra算法
+ *
+ * 问题描述
+ * 有n个农场，将在农场x举行party，农场a->b用时c；有向图；求所有农场中的牛去到农场x再回去所需的最长时间。
+ * 问题分析
+ * 路径都是单向的，从x到所有点的最短路径可以直接通过最短路计算出来。但是从x回去的路径，需要将所有边反向，
+ * 然后再计算最短路。
+ */
 public class SilverCowParty3268 {
 
     public static void main(String[] args) throws IOException {

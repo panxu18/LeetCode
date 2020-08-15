@@ -8,6 +8,15 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+/**
+ * 贪心，优先队列
+ * 问题描述
+ * 有n头牛想要获得完美的肤色，所以它们去沙滩晒日光浴。为了防止晒伤，需要使用遮阳伞，每种遮阳伞的大小和遮挡紫外线效果不
+ * 一样。遮阳伞遮阳效果太好了没办法晒黑，太差了会晒伤，而且每头牛能接受的阳光强度也不一样。求最多能使多少牛舒服晒太阳。
+ * 问题分析
+ * 使用贪心从遮阳效果最差的伞开始安排，为了尽可能多的安排更多牛，因此需要将牛按照它们的承受范围的最小值由小到大排序。
+ * 同时需要对承受区间的最大值进行排序，然后选择其中最小的牛先安排。
+ */
 public class Sunscreen3614 {
 
     public static void main(String[] args) throws IOException {

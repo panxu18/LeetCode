@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.bittree;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,17 @@ import java.io.PrintWriter;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 树状数组，区间更新，区间查询
+ *
+ *问题描述
+ * 给N个数的序列，进行以下两种操作，
+ * 1、将区间l-r的数增加a
+ * 2、查询区间l-r的数的和
+ * 问题分析
+ * 区间和可以使用线段树这种数据结构，将数据的更新和查询操作缩减为logn数量级。这里使用树状数组，对于区间更新线段树可以使
+ * 用延迟更新，而树状数组可以使用辅助数组，设一个前n项和为si = bit1*i + bit2,这里bit1就是用来辅助区间更新的树状数组。
+ */
 public class ASimpleProblemwithIntegers3468 {
 
     public static void main(String[] args) throws IOException, NoSuchFieldException, IllegalAccessException {

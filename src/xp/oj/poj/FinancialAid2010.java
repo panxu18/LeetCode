@@ -8,6 +8,15 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+/**
+ * 枚举、topN、优先队列、尺取法
+ * 问题描述
+ * 给你C个奶牛参加考试的分数，和需要奖学金的数目，让你从中选N头奶牛，需要总奖学金的数目不超过F，并且分数的中位数最大
+ * 问题分析
+ * 问题看起来像01背包，但是最优值比较复杂。	设dp[i][j]表示前i头牛选择N头牛中位数是j时最小的奖金，这个dp从时间和空间上来说都过不了，而且状态转移也 比较复杂。主要是因为，定义的状态太笼统了。
+ * 这里使用直接枚举中位数的方法，中位数肯定是已知的序列中的一个，如果由大到小枚举所有中位数，如果存在以该数为中位数的子序列且f的和不超过F(贪心，尽量选择最小的值)，则该中位数为所求值。已知某一个数为中位数，那么在其左边取N/2个数，计算最小的f的和，同样在右边也取N/2个数。这是一个ktop问题使用优先队列解决就可以了。
+ * 注意点：优先队列中计算topN的和时，计算当前项之前的n项和，不包含当前项。
+ */
 public class FinancialAid2010 {
     public static void main(String[] args) throws IOException {
         new FinancialAid2010().solve();

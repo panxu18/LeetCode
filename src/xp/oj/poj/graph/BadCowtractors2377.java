@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,10 +8,13 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
-public class FindthemCatchthem1703 {
+/**
+ * 最大生成树, kruskal
+ */
+public class BadCowtractors2377 {
 
     public static void main(String[] args) throws IOException {
-        new FindthemCatchthem1703().solve();
+        new BadCowtractors2377().solve();
     }
 
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -59,65 +62,88 @@ public class FindthemCatchthem1703 {
         return true;
     }
 
-    int T, N, M;
-    int[] par = new int[200005];
-    int[] rank = new int[200005];
-
+    int N, M;
+    int ans = 0;
+    Edge[] edges = new Edge[40005];
     private void solve() throws IOException {
-        T = readInt();
-        for (int t = 0; t < T; t++) {
-            N = readInt();
-            M = readInt();
-            init();
-            for (int i = 0; i < M; i++) {
-                int c = readChar();
-                int a = readInt();
-                int b = readInt();
-                if (c == 'A') {
-                    if (isSame(a, b)) {
-                        out.println("In the same gang.");
-                    } else if (isSame(a, b+N) || isSame(b, a+N)) {
-                        out.println("In different gangs.");
-                    } else {
-                        out.println("Not sure yet.");
-                    }
-                } else {
-                    union(a, b+N);
-                    union(b, a+N);
-                }
-            }
+        N = readInt();
+        M = readInt();
+        for (int i = 0; i < M; i++) {
+            edges[i] = new Edge(readInt(), readInt(), readInt());
         }
+        ans = kruskal();
+        out.println(ans);
         out.flush();
     }
 
-    void init() {
-        for (int i = 0; i < par.length; i++) {
-            par[i] = i;
+
+    private int kruskal() {
+        Arrays.sort(edges, 0, M);
+        init();
+        int cnt = 0;
+        int sum = 0;
+        for (int i = 0; i < M; i++) {
+            Edge e = edges[i];
+            if (!isSame(e.from, e.to)) {
+                union(e.from, e.to);
+                cnt++;
+                sum += e.dis;
+            }
         }
-        Arrays.fill(rank,0);
+        return cnt == N - 1 ? sum : -1;
+
     }
 
-    void union(int x, int y){
-        int px = find(x);
-        int py = find(y);
+    private void union(int from, int to) {
+        int px = find(from);
+        int py = find(to);
         if (px == py) {
             return;
         }
-        if (rank[x] < rank[y]) {
+        if (rank[px] < rank[py]){
             par[px] = py;
         } else {
             par[py] = px;
             if (rank[px] == rank[py]) {
-                rank[px]++;
+                rank[py]++;
             }
         }
+    }
+
+    private boolean isSame(int from, int to) {
+        return find(from) == find(to);
     }
 
     private int find(int x) {
         return par[x] == x ? x : (par[x] = find(par[x]));
     }
 
-    private boolean isSame(int x, int y) {
-        return find(x) == find(y);
+    int[] par = new int[1005];
+    int[] rank = new int[1005];
+
+    private void init() {
+        for (int i = 1; i <= N; i++) {
+            par[i] = i;
+        }
+        Arrays.fill(rank,0);
+    }
+
+
+
+
+    class Edge implements Comparable<Edge>{
+        int from;
+        int to;
+        int dis;
+        Edge(int f, int t, int d) {
+            this.from = f;
+            this.to = t;
+            this.dis = d;
+        }
+
+        @Override
+        public int compareTo(Edge o) {
+            return o.dis - dis;
+        }
     }
 }

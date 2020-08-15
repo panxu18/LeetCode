@@ -1,9 +1,17 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * 二分图判定
+ *
+ * 问题描述
+ * 判断给出的图是否是二分图
+ * 问题分析
+ * 二分图判定可以对没有染色的顶点染色，然后通过dfs对节点染色，如果染色中有相邻顶点颜色相同，说明不是二分图。
+ */
 public class BugLife2492 {
 
     public static void main(String[] args) {

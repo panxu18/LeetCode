@@ -8,6 +8,9 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 平方分割，区间第K大数，区间查询
+ */
 public class KthNumber2104 {
 
     public static void main(String[] args) throws IOException, NoSuchFieldException, IllegalAccessException {

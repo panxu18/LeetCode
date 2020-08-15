@@ -1,10 +1,18 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.*;
 import java.util.Arrays;
 
 import static java.lang.Math.min;
 
+/**
+ * 3连通图，双连通连图
+ * 问题描述
+ * 给一个N个节点的图，要求每两个顶点之间至少有3条独立的路径，判断所给的图是否满足该条件。
+ * 问题分析
+ * 所有点之间都有3条独立的路径就表示点3连通图，如果任意删掉1个点，图仍然是双连通图，
+ * 那么原图是3连通图。双连通图可以根据tarjan算法判断。
+ */
 public class TransferringSylla3713 {
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
     PrintWriter out = new PrintWriter(System.out);

@@ -7,6 +7,14 @@ import java.io.PrintWriter;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 尺取法
+ *
+ * 问题描述
+ * 给一个长度为N的序列，计算和不小于S的最短连续子序列的长度。
+ * 问题分析
+ * 朴素算法就是计算从第i个元素开始和不小于S的连续序列长度，当找到一个子序列之后就可以计算i+1了。在实现上就是一个先进先出队列。
+ */
 public class Subsequence3061 {
 
     public static void main(String[] args) throws IOException {

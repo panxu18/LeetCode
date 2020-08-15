@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,13 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 最小生成树最大边
+ * 问题描述
+ * 最小生成树种计算最大的边
+ * 问题分析
+ * 稀疏图使用kruskal，然后保存最大的边。
+ */
 public class OutofHay2395 {
 
     public static void main(String[] args) throws IOException {
@@ -76,15 +83,17 @@ public class OutofHay2395 {
     private int kruskal() {
         Arrays.sort(edges, 0, M);
         init();
+        int cnt = 0; // 判断是否能构成最小生成树
         int max = 0;
         for (int i = 0; i < M; i++) {
             Edge e = edges[i];
             if (isSame(e.from, e.to)) {
                 union(e.from, e.to);
                 max = Math.max(max, e.dis);
+                cnt++;
             }
         }
-        return max;
+        return cnt == N - 1 ? max : -1;
     }
 
 

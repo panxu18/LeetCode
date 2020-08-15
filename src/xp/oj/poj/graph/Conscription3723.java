@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,17 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+/**
+ * 最小生成树
+ *
+ * 问题描述
+ * windy要组建一支军队，召集了N个女孩和M个男孩，每个人要付10000RMB，但是如果一个女孩和一个男孩有关系d的，且已经付给了
+ * 其中一个人的钱，那么就可以付给另一个人10000-d元，求windy最少要付多少钱。
+ * 问题分析
+ * 如果所有人之间没有关系，那么花费为(N + m)*10000。如果考虑这些人之间的关系，那么关系为d就可以减少d开销，如果一个男孩
+ * 和两个女都有关系，肯定选择较大的d。因此问题就是在图中计算最大树或者最大森林。
+ * 注意oj输入的数据不规范，需要使用token分词输入。
+ */
 public class Conscription3723 {
 
     public static void main(String[] args) throws IOException {

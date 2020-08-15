@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,16 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
+/**
+ * 差分约束，spfa算法
+ * 问题描述
+ * 一共有n头牛，有ml个关系好的牛的信息，有md个关系不好的牛的信息，对应输入的第一行的三个元素，接下来ml行，每行三个
+ * 元素A,B,D，表示A牛和B牛相距不希望超过D，接下来md行，每行三个元素A,B,D表示A牛和B牛的相距至少要有D才行。求1号牛和n号牛
+ * 的最大距离，如果距离无限大输出-2，如果无解输出-1。
+ * 问题分析
+ * 典型的差分约束系统，目标xn-x1最大值，即xn-x1<=D，因此约束为xi-xj<=d。根据传递性用边<a,b,c>表示b-a<=c，无路径可达表
+ * 示没有约束，如果有负环表示约束之间有矛盾。
+ */
 public class Layout3169 {
 
     public static void main(String[] args) throws IOException {

@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.tree;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,10 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+/**
+ * LCA、最近公共祖先、倍增法
+ *
+ */
 public class NearestCommonAncestors1330 {
 
     public static void main(String[] args) throws IOException {

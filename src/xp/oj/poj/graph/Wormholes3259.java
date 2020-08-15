@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,6 +9,14 @@ import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 负环判断，spfa算法
+ *
+ * 问题描述
+ * 农场中有很多路径，路径是双向的，每条路径需要花费时间为t。农场中存在虫洞，虫洞可以回到过去，经过虫洞后时间会倒退t。判断在农场某一点出发是否可以回到过去（再次回到起点，但时间是过去的时间）。
+ * 问题分析
+ * 如果图中存在负环，那么最后一定可以回到过去。通过SPFA判断负环。
+ */
 public class Wormholes3259 {
 
     public static void main(String[] args) throws IOException {

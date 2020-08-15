@@ -1,11 +1,27 @@
-package xp.oj;
+package xp.oj.poj.bittree;
 
 import java.io.*;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class HousewifeWind {
+/**
+ * LCA,最短公共祖先，RMQ，树状数组
+ *
+ * 问题描述
+ * 给定一棵含n个结点的树和树的边权，共有q次操作，分为两种
+ * 操作1、0 c ：求从位置s到c的距离，然后s变成c
+ * 操作2、 1 a b:把第a条边的权值变为b
+ *
+ * 问题分析
+ * 通过两个节点的LCA可以分别求出两个节点到LCA的距离，通过二分搜索的LCA算法，可以在O(logn)时间内求出两个节点的距离，
+ * 但是修改一条边的权需要将所有经过该边的路径进行更新。虽然可以将延后到查询时处理，开销会分摊到每个查询中，但是总的开销不会变。
+ * 如果使用基于RMQ的LCA算法，那么这两个操作实际上就可以使用基于线段树、BIT数组之类数据结构的算法。
+ * 下面使用BIT数组来解决这个问题，分为几个步骤：
+ * 使用基于RMQ的LCA算法初始化BIT数组
+ * 在BIT数组上进行查询和更新
+ */
+public class HousewifeWind2763 {
 
     private static int n;
     private static Edge[] line; // 边集合

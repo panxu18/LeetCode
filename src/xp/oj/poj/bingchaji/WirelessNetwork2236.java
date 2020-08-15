@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.bingchaji;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,13 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 并查集
+ * 问题描述
+ * 有一个计算机网络的所有线路都坏了，网络中有n台计算机，现在你可以做两种操作，修理（O）和检测两台计算机是否连通（S），只有修理好的计算机才能连通。连通有个规则，两台计算机的距离不能超过给定的最大距离D（一开始会给你n台计算机的坐标）。检测的时候输出两台计算机是否能连通。
+ * 问题分析
+ * 首先需要计算能直接连通的两个计算机，每修好一个计算机之后，将其能直接连通的计算机添加到同一个集合。
+ */
 public class WirelessNetwork2236 {
     public static void main(String[] args) throws IOException {
         new WirelessNetwork2236().solve();

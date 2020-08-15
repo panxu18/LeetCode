@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,16 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 多源最短路径，floyd算法
+ *
+ * 问题描述
+ * 有n头奶牛，如果奶牛在同一部电影中工作过，那么这些奶牛就是有关系的，关系距离为1当然也可
+ * 以通过其他奶牛产生间接的关系，问你那头奶牛的与其他奶牛的平均关系距离最小。
+ * 问题分析
+ * 多源最短路径，直接使用floyd算法，然后计算路径平均值。
+ * 注意点：最后结果是取整。
+ */
 public class SixDegreesofCowvinBacon2139 {
 
     public static void main(String[] args) throws IOException {

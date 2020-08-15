@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,15 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 最小生成树，prime算法
+ *
+ * 问题描述
+ * 给一个邻接矩阵，求最小生成树。
+ * 问题分析
+ * 使用prime算法求最小生成树。
+ * 注意点：多组输入，数据初始化（ans）。
+ */
 public class AgriNet1258 {
 
     public static void main(String[] args) throws IOException {

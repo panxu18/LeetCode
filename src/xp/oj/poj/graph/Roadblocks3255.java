@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,18 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
+/**
+ * K最短路，dijkstra, A*算法
+ *
+ * 问题描述
+ * 在图中查找从1到N的第k短路径。
+ * 问题分析
+ * A*算法可以用来搜索所有到达t的路径，在这个问题中因为估计函数就是到达目标的距离，所以按照估价函数由小到大搜索会依
+ * 次得到第K最短路径。
+ * 假如估计的距离等于最短路径中所在位置到终点的距离，那么便会按照最短路径行走（未卜先知走的当然是最短路线，
+ * 而且不会碰壁效率超高）；假如估计值要小于实际值，效率比较低，但会找到最优解；而估计值大于实际值，
+ * 会导致找到的解不是最优解。
+ */
 public class Roadblocks3255 {
     public static void main(String[] args) throws IOException {
         new Roadblocks3255().solve();
@@ -86,6 +98,33 @@ public class Roadblocks3255 {
         public int compareTo(PairOfDisAndVec p) {
             return dis < p.dis ? -1 : (dis == p.dis ? 0 : 1);
         }
+    }
+
+    long[] reDis = new long[5005];
+    long AStar(int s, int t, int k) {
+        int cnt = 0;
+        PriorityQueue<PairOfDisAndVec> que = new PriorityQueue<PairOfDisAndVec>();
+        if (s == t) {
+            k++;
+        }
+        if (reDis[s] == Long.MAX_VALUE){
+            return Long.MAX_VALUE;
+        }
+        que.offer(new PairOfDisAndVec(reDis[s], s));
+        while (!que.isEmpty()) {
+            PairOfDisAndVec p = que.poll();
+            if (p.vec == t) {
+                cnt++;
+            }
+            if (cnt == k) {
+                return p.dis;
+            }
+            for (Edge e = head[p.vec]; e != null; e = e.next) {
+                long g = p.dis - reDis[p.vec] + e.dis;
+                que.offer(new PairOfDisAndVec(g + reDis[e.to], e.to));
+            }
+        }
+        return 0L;
     }
 
 

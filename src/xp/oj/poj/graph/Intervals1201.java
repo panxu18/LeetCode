@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.*;
 import java.util.Arrays;
@@ -7,6 +7,16 @@ import java.util.LinkedList;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 
+/**
+ * 最长路径，差分系统， spaf
+ *
+ *  问题描述
+ * 有N个区间<ai,bi>，在这些区间中选择一些点，要求每个区间至少选择ci个点，求最少选择多少个点。
+ * 问题分析
+ * 给问题可以变为一个差分约束问题，设si为[0,i]中至少选择的点数，那么根据题目要求对于区间<a,b>
+ *     来说有sb-sa>=c，
+ * 同时si+1 - si >=0, si+1 - si <= 1。构图后计算从起点到终点的最长路径。
+ */
 public class Intervals1201 {
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
     PrintWriter out = new PrintWriter(System.out);

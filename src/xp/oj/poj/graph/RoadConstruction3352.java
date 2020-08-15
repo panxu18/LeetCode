@@ -1,10 +1,22 @@
-package xp.oj.poj;
+package xp.oj.poj.graph;
 
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
 
+/**
+ * 双边连通分量、缩点、边访问标记
+ *
+ * 问题描述
+ * 在一个连通图中，添加多少条边可以使图变为边双连通图。
+ * 问题分析
+ * 先求所有的边双连通分量，然后在将这些这些双连通分量通过桥构成树，树中叶子节点两个组成一对，
+ * 叶子节点的对数就是需要添加的边。
+ * 找到一个边双连通分量时，退栈要将当前根节点也退出来。
+ * 注意点无向图构图通常使用有向边，当存在重边时无法通过父节点和顶点访问标志进行判断，因此需要使用边访问标志。
+ * 通过建边时将边从0开始编号，回边为i+1,边访问标志就是将i和i^1同时标记。
+ */
 public class RoadConstruction3352 {
 
     public static void main(String[] args) {

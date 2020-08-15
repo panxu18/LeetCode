@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
@@ -6,6 +6,21 @@ import java.util.LinkedList;
 
 import static java.lang.Math.min;
 
+/**
+ * 最大密度子图, 最小割
+ *
+ * 问题描述
+ * 给一个图，选择其中若干个顶点以及它们之间的边作为一个子图，使这个子图中边的数量/顶点数量最大。
+ * 问题分析
+ * 该问题是计算最大密度子图，首先最大化D=|E|/|V|可以看出是一个01规划问题，通过枚举D计算最大值的D，问题在于如何判断对于
+ * 一个给定的d是否存在|E|-D*|V|>0，即max{|E|-D*|V|}>0。假设存在一个顶点集合V，那么其中边的数量应该等于V中顶点所有的边
+ * 减去V和V的补给V'之间的边，从这个角度来看，应该是可以利用最小割解决。转化为最小割的形式之后的表达式为：
+ *
+ * 前面一部分可以看做是选择顶点的代价，所以应该表示为顶点到汇点t的边。后面一部分表示为两集合之间的边，通常这一部分会分
+ * 成两部分写即V->V'的边和V'->V的边，看起来是重复计算了，实际上在计算最大流时，最多只会选择其中一条边。这里没有表示不选
+ * 的代价，因为不选的代价为0，但是建图时容量为0的边导致无法增广，所以这里考虑对不选时的边添加一个较大的初始容量，
+ * 在计算最小割之后需要将这一部分初始容量减掉。
+ */
 public class HardLife3155 {
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
     PrintWriter out = new PrintWriter(System.out);
