@@ -1,9 +1,13 @@
-package xp.oj.poj;
+package xp.oj.meiju;
 
 import java.io.*;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * 01分数规划，最大化平均值，枚举
+ *
+ */
 public class DroppingTests2976 {
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
     PrintWriter out = new PrintWriter(System.out);

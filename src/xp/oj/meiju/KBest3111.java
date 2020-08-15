@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.meiju;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,6 +9,15 @@ import java.util.Comparator;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+/**
+ * 最大化平均值, 二分枚举
+ *
+ * 问题描述
+ * 给N个物品，每个物品的重量为wi，价值为vi。从中选择K个物品，使所选K个物品的价值/重量最大。
+ * 问题描述
+ * 最大化平均值问题中，不能使用每个物品的平均价值进行贪心选择。根据K个物品的平均值公式 E = sum(vi)/sum(wi),枚举所有的E，
+ * 判断是否从当前的物品中选择K个物品使其平均价值大于E。判断是否可以达到E，通过将上面公式变形sum(vi) - sum(E*wi)>0。
+ */
 public class KBest3111 {
 
     public static void main(String[] args) throws IOException {

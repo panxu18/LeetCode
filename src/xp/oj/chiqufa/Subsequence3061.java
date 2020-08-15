@@ -1,25 +1,24 @@
-package xp.oj.poj;
+package xp.oj.chiqufa;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
-import java.util.TreeMap;
 
 /**
  * 尺取法
+ *
  * 问题描述
- * 有本书，每一页一个知识点，知识点会重复出现，通过阅读最少的连续页学习到所有至少点。
+ * 给一个长度为N的序列，计算和不小于S的最短连续子序列的长度。
  * 问题分析
- * 从第i页开始阅读，直到学习全部知识点。然后去掉i页的知识点，从i+1开始，直到学习所有知识点。
+ * 朴素算法就是计算从第i个元素开始和不小于S的连续序列长度，当找到一个子序列之后就可以计算i+1了。在实现上就是一个先进先出队列。
  */
-public class JessicaReadingProblem3320 {
+public class Subsequence3061 {
 
     public static void main(String[] args) throws IOException {
-        new JessicaReadingProblem3320().solve();
+        new Subsequence3061().solve();
     }
 
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -55,34 +54,23 @@ public class JessicaReadingProblem3320 {
     int T, N, S;
     int INF = 1000000007;
     int[] arr = new int[100005];
-    Map<Integer, Integer> map = new TreeMap<Integer, Integer>();
     private void solve() throws IOException {
-        N = readInt();
-        for (int i = 0; i < N; i++) {
-            arr[i] = readInt();
-            map.put(arr[i], 0);
-        }
-        int tot = map.size();
-        int cnt = 0;
-        int head = 0, tail = 0;
-        int ans = INF;
-        for (int i = 0; i < N; i++) {
-            int c = map.get(arr[i]);
-            if (c == 0) {
-                cnt++;
-            }
-            map.put(arr[tail++], c + 1);
-
-            while (head < tail && cnt >= tot) {
-                ans = Math.min(ans, tail - head);
-                c = map.get(arr[head]);
-                if (c == 1) {
-                    cnt--;
+        T = readInt();
+        for (int t = 0; t < T; t++) {
+            N = readInt();
+            S = readInt();
+            int head = 0, tail = 0, sum = 0, ans = INF;
+            for (int i = 0; i < N; i++) {
+                int a = readInt();
+                arr[tail++] = a;
+                sum += a;
+                while (sum >= S && head < tail){
+                    ans = Math.min(ans, tail - head);
+                    sum -= arr[head++];
                 }
-                map.put(arr[head++], c - 1);
             }
+            out.println(ans == INF ? 0 : ans);
         }
-        out.println(ans);
         out.flush();
     }
 }

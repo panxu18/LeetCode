@@ -1,10 +1,22 @@
-package xp.oj.poj;
+package xp.oj.meiju;
 
 import java.io.*;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * 枚举，01最短路径
+ *
+ * 问题描述
+ * 有K根电线杆，其中有一些电线杆之间可以连接一条电线，现在要使第1根电线杆和第N根电线杆连接。假设供电公司免费提供K根电线
+ * ，剩下的电线中最长的电线长度是多少。
+ * 问题分析
+ * 首先将两种特殊情况单独考虑，1、从电线杆1到电线杆N之间最多只需要K根电线，这样所有电线都是免费的；2、电线杆1到电线杆N之
+ * 间无法连通。这两种情况可以使用bfs计算电线杆1到电线杆N的最短连接数。
+ * 剩下的情况就需要枚举第K+1根电线的长度d，计算从电线杆1到电线杆N之间最少要多少条距离大于d的电线，把距离大于d的电线看
+ * 做1，其他的看做0，就可以使用最短路径计算。对于01最短路径可以使用双端队列BFS优化。
+ */
 public class TelephoneLines3662 {
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
     PrintWriter out = new PrintWriter(System.out);

@@ -1,10 +1,20 @@
-package xp.oj.poj;
+package xp.oj.chiqufa;
 
 import java.io.*;
 import java.util.Arrays;
 
 import static java.lang.Math.*;
 
+/**
+ * 前缀和,chiqufa
+ *
+ * 问题描述
+ * 给一个长度为N的序列，选择一个区间计算其和的绝对值，使其最接近给定的目标值t。
+ * 问题分析
+ * 需要表示区间的和，可以使用前缀和相减表示，所以先计算前缀和，对前缀和排序后，就可以得到单调的区间和。
+ * 然后通过尺取法计算结果。
+ * 注意：前0个元素的前缀和为0也要考虑。
+ */
 public class BoundFound2566 {
 
     StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));

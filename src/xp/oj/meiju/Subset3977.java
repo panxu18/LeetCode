@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.meiju;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,6 +10,15 @@ import java.util.StringTokenizer;
 
 import static java.lang.Math.abs;
 
+/**
+ * 超大背包，枚举
+ *
+ * 问题描述
+ * 给N个数，从中选择一个子集，使其绝对值和最小。
+ * 问题分析
+ * 这是一个01背包问题，但是有一维范围太大了。所以不能使用dp解法。考虑到N比较小，所以尝试使用枚举。为了缩小枚举空间，将N个数分为两半，对第一部分进行枚举，求出所有组合的和。然后第二部分枚举时可以通过在第一部分的组合中二分查找。
+ * 注意点：ans的初始值要设置正确；如果对N等于1特判，那么注意返回绝对值。
+ */
 public class Subset3977 {
 
     public static void main(String[] args) throws IOException, NoSuchFieldException, IllegalAccessException {
