@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.shulun;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,17 +8,19 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 /**
- * 快速幂
+ * 伪素数打表
  *
  * 问题描述
- * 给一个序列，包含多个<ai,bi>，计算所有ai^bi的和的模。
+ * 定义一种数H满足4n+1，定义H-prime为H集合内的质数（即不考虑集合H之外的因子），定义H-SemiPrime为两个H-prime的乘积。
+ * 计算H-SemiPrime的个数。
  * 问题分析
- * 快速幂裸题
+ * 题目给的数据域不是正整数，而是4n+1的正整数，因此首先打表筛选出数据域H内的数，然后在使用素数筛选法打表标记H数据域内的
+ * 素数。筛选semiprime可以再次使用素数筛选法，再标记为非素数时，检测是否为semiprime。
  */
-public class RaisingModuloNumbers1995 {
+public class SemiprimeHnumbers3292 {
 
     public static void main(String[] args) throws IOException {
-        new RaisingModuloNumbers1995().solve();
+        new SemiprimeHnumbers3292().solve();
     }
 
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -73,48 +75,54 @@ public class RaisingModuloNumbers1995 {
         return true;
     }
 
-    int MAXN;
-    int Z;
+    int H;
+    int N = 1000001;
+    int[] dp = new int[1000005];
+    boolean[] isHPrime = new boolean[1000005];
+    boolean[] isHSemiPrime = new boolean[1000005];
     private void solve() throws IOException {
-        Z = readInt();
-        for (int z = 0; z < Z; z++) {
-            int m = readInt();
-            int n = readInt();
-            int ans = 0;
-            for (int i = 0; i < n; i++) {
-                ans += powMod(readInt(), readInt(), m);
-                ans %= m;
+        checkPrimes();
+        while (true){
+            H = readInt();
+            if (H == 0) {
+                break;
             }
-            out.println(ans);
+            out.printf("%d %d\n", H, dp[H]);
         }
         out.flush();
     }
 
-    private int powMod(int a, int b, int m) {
-        int res = 1;
-        while (b > 0) {
-            if ((b &1) == 1) {
-                res = mulMod(res, a, m);
+    void checkPrimes() {
+        for (int i = 2; i < N; i++) {
+            if ((i - 1) % 4 == 0) {
+                isHPrime[i] = true;
             }
-            a = mulMod(a, a, m);
-            b >>= 1;
         }
-        return res;
+        for (int i = 2; i * i < N; i++) {
+            if (isHPrime[i]) {
+                for (int j = i<<1; j < N; j += i) {
+                    isHPrime[j] = false;
+                }
+            }
+        }
+        for (int i = 2; i * i < N; i++) {
+            if (isHPrime[i]) {
+                for (int j = 2; j *  i < N; j++) {
+                    if (isHPrime[j]) {
+                        isHSemiPrime[i*j] = true;
+                    }
+                }
+            }
+        }
+
+        dp[1] = 0;
+        for (int i = 2; i < N; i++) {
+            if (isHSemiPrime[i]) {
+                dp[i] = dp[i - 1] + 1;
+            } else {
+                dp[i] = dp[i - 1];
+            }
+        }
     }
 
-    private int mulMod(int a, int b, int m) {
-        int res = 0;
-        a %= m;
-        b %= m;
-        while (b > 0) {
-            if ((b&1)==1) {
-                res += a;
-                res %= m;
-            }
-            a <<= 1;
-            a %= m;
-            b >>= 1;
-        }
-        return res;
-    }
 }

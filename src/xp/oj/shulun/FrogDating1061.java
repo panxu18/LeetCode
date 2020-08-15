@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.shulun;
 
 import java.io.BufferedReader;
 import java.io.IOException;
