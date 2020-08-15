@@ -10,7 +10,7 @@ public class test1 {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 1; i <= a / 2; i++) {
+        for (int i = 1; i <= a / 4; i++) {
             int j = reverse(i);
             if (i * 4 == j) {
                 count++;
