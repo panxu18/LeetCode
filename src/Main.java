@@ -29,6 +29,4 @@ public class Main {
         out.println(ans);
         out.flush();
     }
-
-
 }
