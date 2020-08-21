@@ -22,58 +22,47 @@ public class Test1 {
             }
         }
         int[][] matrix=new int[n][n];
-        ArrayList<Integer> list=printMatrix(matrix,array);
-
-        for(int i=0;i<list.size();i++){
-            System.out.print(list.get(i));
-            if((i+1)/n==0){
-                System.out.println();
+        printMatrix(matrix,array);
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                System.out.print(matrix[i][j]+" ");
             }
+            System.out.println();
+
         }
     }
 
-    public static ArrayList<Integer> printMatrix(int [][] matrix,int[] array) {
-        ArrayList<Integer> list=new ArrayList<>();
-        if(matrix.length==0||matrix[0].length==0){
-            return list;
-        }
+    public static void printMatrix(int [][] matrix,int[] array) {
         int tR=0;
         int tC=0;
         int dR=matrix.length-1;
         int dC=matrix[0].length-1;
         while(tR<=dR&&tC<=dC){
-            printEdge(tR++,tC++,dR--,dC--,matrix,list,array);
+            printEdge(tR++,tC++,dR--,dC--,matrix,array);
         }
-        return list;
     }
 
-    public static void printEdge(int tR,int tC,int dR,int dC,int[][] matrix,ArrayList<Integer> list,int[] array){
+    public static void printEdge(int tR,int tC,int dR,int dC,int[][] matrix,int[] array){
         if(tR==dR){
             for(int i=tC;i<=dC;i++){
                 matrix[tR][i]=array[count--];
-                list.add(matrix[tR][i]);
             }
         }else if(tC==dC){
             for(int i=tR;i<=dR;i++){
                 matrix[i][tC]=array[count--];
-                list.add(matrix[i][tC]);
             }
         }else{
             for(int i=tC;i<dC;i++){
                 matrix[tR][i]=array[count--];
-                list.add(matrix[tR][i]);
             }
             for(int i=tR;i<dR;i++){
                 matrix[i][dC]=array[count--];
-                list.add(matrix[i][dC]);
             }
             for(int i=dC;i>tC;i--){
                 matrix[dR][i]=array[count--];
-                list.add(matrix[dR][i]);
             }
             for(int i=dR;i>tR;i--){
                 matrix[i][tC]=array[count--];
-                list.add(matrix[i][tC]);
             }
         }
     }
