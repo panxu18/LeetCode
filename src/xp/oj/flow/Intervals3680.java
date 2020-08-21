@@ -11,7 +11,8 @@ import static java.lang.Math.min;
  * 问题描述
  * 给N个带权的开区间，i号区间覆盖（ai,bi),权重为wi，先要从中选取一些区间，要求任意点都不被覆盖超过K次，计算最大权重和。
  * 问题分析
- * 把区间看成流量为1的流，当区间不重合时，这两个流是同一个流量为1的流。因此如果出现流量为K的流就说明有区间重叠了K次。因此问题变为计算求最大流量为K时的最大权重。
+ * 把区间看成流量为1的流，当区间不重合时，这两个流是同一个流量为1的流。因此如果出现流量为K的流就说明有区间重叠了K次。
+ * 因此问题变为计算求最大流量为K时的最大权重。
  * 因为区间范围比较大，所以需要离散化坐标。
  */
 public class Intervals3680 {
@@ -31,21 +32,12 @@ public class Intervals3680 {
         return in.sval;
     }
 
-    int MAXN = 500;
-    int INF = 1000000007;
-    long ans;
     int N,T, K;
-    int source, sink;
-    boolean[] path = new boolean[MAXN];
-    boolean[] used = new boolean[MAXN];
-    long[] dis = new long[MAXN];
-    Edge[] head = new Edge[MAXN];
     int[] arr = new int[MAXN];
     int cnt = 0;
-    int m = 0;
+
     Range[] ranges = new Range[MAXN];
-    long[] slack = new long[MAXN];
-    Edge[] cur = new Edge[MAXN];
+
     private void solve() throws IOException {
         T = (int) readDouble();
         for (int t = 0; t < T; t++) {
@@ -88,6 +80,17 @@ public class Intervals3680 {
 
     }
 
+
+    class Range{
+        int x, y, cost;
+
+        public Range(int x, int y, int cost) {
+            this.x = x;
+            this.y = y;
+            this.cost = cost;
+        }
+    }
+
     private int unique(int[] arr, int s, int t) {
         int head = s, tail = s;
         for (int i = s; i < t; i++) {
@@ -98,11 +101,20 @@ public class Intervals3680 {
         return tail;
     }
 
-    private void addEdge(int u, int v, long cap, long cost) {
-        head[u] = new Edge(u, v, cap, cost, head[u], null);
-        head[v] = new Edge(v, u, 0, -cost, head[v], head[u]);
-        head[u].rEdge = head[v];
-    }
+
+    // 以下为zkw费用流模板
+    static int MAXN = 500;
+    int INF = 1000000007;
+    long ans;
+    int source, sink;
+    boolean[] path = new boolean[MAXN];
+    boolean[] used = new boolean[MAXN];
+    long[] dis = new long[MAXN];
+    Edge[] head = new Edge[MAXN];
+    long[] slack = new long[MAXN];
+    Edge[] cur = new Edge[MAXN];
+    int m = 0; // 节点数量
+
 
     private void minCostMaxFlow() {
         Arrays.fill(dis, 0);
@@ -175,14 +187,10 @@ public class Intervals3680 {
         return f;
     }
 
-    class Range{
-        int x, y, cost;
-
-        public Range(int x, int y, int cost) {
-            this.x = x;
-            this.y = y;
-            this.cost = cost;
-        }
+    private void addEdge(int u, int v, long cap, long cost) {
+        head[u] = new Edge(u, v, cap, cost, head[u], null);
+        head[v] = new Edge(v, u, 0, -cost, head[v], head[u]);
+        head[u].rEdge = head[v];
     }
 
     class Edge{

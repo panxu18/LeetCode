@@ -1,4 +1,4 @@
-package xp.oj.poj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
@@ -7,54 +7,62 @@ import java.util.LinkedList;
 import static java.lang.Math.min;
 
 /**
- * 最小费用最大流
+ * 最大费用最大流
  *
- * ：N个仓库由M条有向边连接，每条边都有一定费用。将两种危险品从0运到N-1，除了起点和终点外，危险品不能放在一起，
- * 也不能走相同的路径。求最小费用？
+ * 问题描述
+ * 公司有N辆货车，现在A地和B地分别需要a,b车辆，已知每辆车去这两第能获得最大利润，计算如何分配能得到最大利润。
  * 问题分析
- * 普通点的容量都为1，起点和终点的容量为2建图，然后跑最小费用最大流
- *
+ * 使用最小费用最大流，将边权设为负值即可得到最大费用最大流。
  */
-public class ShortestPairOfPaths3068 {
-    StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
-    PrintWriter out = new PrintWriter(System.out);
+public class MaxCostMaxFlow {
 
-    int read() throws IOException {
+    public static void main(String[] args) throws IOException {
+        new MaxCostMaxFlow().solve();
+    }
+    PrintWriter out = new PrintWriter(System.out);
+    StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+    int readInt() throws IOException {
         in.nextToken();
         return (int) in.nval;
     }
 
-    public static void main(String[] args) throws IOException {
-        new ShortestPairOfPaths3068().solve();
+    String readString() throws IOException {
+        in.nextToken();
+        return in.sval;
     }
 
-    int N, M, K;
+
+    int N;
+    int A, B;
+    int indexA, indexB;
 
     private void solve() throws IOException {
-        int cases = 0;
-        while ((N = read()) != 0){
-            cases++;
-            M = read();
-            Arrays.fill(head, null);
-            ans = 0;
-            source = 0;
-            sink = (N-1)<<1|1;
-            for (int i = 0; i < M; i++) {
-                addEdges(read()<<1|1, read()<<1, 1, read());
-            }
-            addEdges(0, 1, 2, 0);
-            for (int i = 1; i +1 < N; i++) {
-                addEdges(i<<1, i<<1|1, 1, 0);
-            }
-            addEdges((N-1)<<1, (N-1)<<1|1, 2, 0);
-            if (minCostMaxFlow() >= 2) {
-                out.printf("Instance #%d: %d\n", cases, ans);
-            } else {
-                out.printf("Instance #%d: Not possible\n", cases);
-            }
+        N = readInt();
+        A = readInt();
+        B = readInt();
+        Arrays.fill(head, null);
+        indexA = N +1;
+        indexB = N + 2;
+
+        source = N +3;
+        sink = N + 4;
+
+
+        for (int i = 1; i <= N; i++) {
+            int costA = readInt();
+            addEdges(indexA, i, 1, -costA);
+            int costB = readInt();
+            addEdges(indexB, i, 1, -costB);
+            addEdges(i, sink, 1, 0);
         }
+        addEdges(source, indexA, A, 0);
+        addEdges(source, indexB, B, 0);
+        minCostMaxFlow();
+        out.println(-ans);
         out.flush();
+
     }
+
 
     // 以下内容为spfa多路增广最小费用流模板
     int MAXN = 100009;

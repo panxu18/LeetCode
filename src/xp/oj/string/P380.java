@@ -101,11 +101,22 @@ public class P380 {
         char[] arr2 = t.toCharArray();
         while (b - 1> a) {
             int mid = (b + a) >> 1;
-            int ans = Arrays.compare(arr1, sa[mid], Math.min(sa[mid] + t.length(), s.length()), arr2, 0, t.length());
+            int ans = arrayCompare(arr1, sa[mid], Math.min(sa[mid] + t.length(), s.length()), arr2, 0, t.length());
             if (ans < 0) a = mid;
             else b = mid;
         }
-        return Arrays.compare(arr1, sa[b], Math.min(sa[b] + t.length(), s.length()), arr2, 0, t.length()) == 0;
+        return arrayCompare(arr1, sa[b], Math.min(sa[b] + t.length(), s.length()), arr2, 0, t.length()) == 0;
+    }
+
+    int arrayCompare(char[] arr1, int s1, int t1, char[] arr2, int s2, int t2) {
+        for (int i = 0; s1 + i < t1 && s2 + i < s2; i++) {
+
+            if (arr1[s1 + 1] == arr2[s2 + 1]) {
+                continue;
+            }
+            return Character.compare(arr1[s1 + 1], arr2[s2 + 1]);
+        }
+        return Integer.compare(t1 - s1, t2 - s2);
     }
 
     int[] lcp;
