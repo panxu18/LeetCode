@@ -10,7 +10,7 @@ public class Test1 {
         int n = in.nextInt();
         int ans = 0;
         int[] ansInt = new int[n];
-        for (int i = 102; i <= n/2; i++) {
+        for (int i = 102; i <= 999; i++) {
             if (check(i, n)){
                 ansInt[ans++] = i;
 

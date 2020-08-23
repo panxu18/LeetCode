@@ -1,7 +1,10 @@
-package xp.oj;
+package xp.oj.shulun;
 
 import java.util.Scanner;
 
+/**
+ * 欧几里得
+ */
 public class Euclid {
 
     static int n, m, c;

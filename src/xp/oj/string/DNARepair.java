@@ -1,4 +1,4 @@
-package xp.oj;
+package xp.oj.string;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+/**
+ * KMP算法，trie树
+ */
 public class DNARepair {
 
     public static void main(String[] args) {

@@ -1,10 +1,13 @@
-package xp.oj;
+package xp.oj.shulun;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * 数论莫比乌斯反演
+ */
 public class MobiusInverion {
 
     static int n;

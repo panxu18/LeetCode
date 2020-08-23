@@ -1,7 +1,10 @@
-package xp.oj;
+package xp.oj.shulun;
 
 import java.util.Scanner;
 
+/**
+ * 容斥原理
+ */
 public class RongchiPrinciple {
 
     static int n,m;

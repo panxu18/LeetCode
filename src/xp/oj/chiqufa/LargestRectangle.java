@@ -1,8 +1,11 @@
-package xp.oj;
+package xp.oj.chiqufa;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
+/**
+ * 尺取法，队列，最大矩形，接雨水问题
+ */
 class LargestRectangle {
 
     InputReader in = new InputReader(System.in);

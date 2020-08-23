@@ -1,32 +1,15 @@
 import java.io.*;
+import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.Date;
 
 public class Main {
-
-    StreamTokenizer in = new StreamTokenizer(
-            new BufferedReader(new InputStreamReader(System.in)));
-    PrintWriter out = new PrintWriter(System.out);
-
-    int read() throws IOException {
-        in.nextToken();
-        return (int) in.nval;
-    }
-
-    public static void main(String[] args) throws IOException {
-        new Main().solve();
-    }
-
-    int N, M, K;
-    int ans = 0;
-    private void solve() throws IOException {
-        N = read();
-        for (int i = 0; i < N; i++) {
-            int a = read();
-            if (a < 2) {
-                continue;
-            }
-            ans += (i>>1);
-        }
-        out.println(ans);
-        out.flush();
+    public static void main(String[] args) {
+        Date now = new Date();
+        System.out.printf("now: %d\n", now.getTime());
+        Date copy = (Date) now.clone();
+        copy.setDate(10);
+        System.out.printf("now: %d\n", now.getTime());
+        System.out.printf("copy: %d\n", copy.getTime());
     }
 }

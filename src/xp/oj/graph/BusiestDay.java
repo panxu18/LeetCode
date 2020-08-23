@@ -1,4 +1,4 @@
-package xp.oj;
+package xp.oj.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+/**
+ * 2SAT问题，强连通分量
+ */
 public class BusiestDay {
 
     static int[] S;

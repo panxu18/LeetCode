@@ -1,4 +1,4 @@
-package xp.oj;
+package xp.oj.flow;
 
 import java.io.*;
 import java.util.Arrays;
@@ -6,6 +6,9 @@ import java.util.LinkedList;
 
 import static java.lang.Math.min;
 
+/**
+ * ISAP，最大流算法
+ */
 public class ISAP {
 
     public static void main(String[] args) throws IOException {
