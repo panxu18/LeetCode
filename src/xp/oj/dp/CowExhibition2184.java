@@ -89,17 +89,4 @@ public class CowExhibition2184 {
 
     }
 
-    class Block implements Comparable<Block>{
-        int h,a,c;
-        Block(int h, int a, int c){
-            this.h = h;
-            this.a = a;
-            this.c = c;
-        }
-
-        @Override
-        public int compareTo(Block o) {
-            return a - o.a;
-        }
-    }
 }
