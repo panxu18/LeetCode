@@ -2,6 +2,9 @@ package xp.pan.baidu;
 
 import java.util.Scanner;
 
+/**
+ * 有N个数，只包含0和5,从中选择若干个数组成一个最大的数能被90整除。
+ */
 public class Test0903_1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
