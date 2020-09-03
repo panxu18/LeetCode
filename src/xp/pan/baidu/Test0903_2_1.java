@@ -1,40 +1,43 @@
 package xp.pan.baidu;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class Test0903_2_1 {
-    private static int T, N, M;
-    private static int MAXN = 1010;
-    private static BitSet[] bitSets = new BitSet[11];
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        T = in.nextInt();
-        for (int t = 0; t < T; t++) {
-            N = in.nextInt();
-            M = in.nextInt();
+        int caseCnt = in.nextInt();
+        for (int t = 0; t < caseCnt; t++) {
+            int N = in.nextInt();
+            int M = in.nextInt();
+            BitSet[] bitSets = new BitSet[M];
             for (int i = 0; i < M; i++) {
-                bitSets[i] = new BitSet(1010);
+                bitSets[i] = new BitSet(N+1);
             }
             for (int i = 0; i < M; i++) {
                 int k = in.nextInt();
                 for (int j = 0; j < k; j++) {
-                    int l = in.nextInt();
-                    int r = in.nextInt();
-                    bitSets[i].set(l, r+1);
+                    bitSets[i].set(in.nextInt(), in.nextInt() + 1);
                 }
-            }
-            for (int i = 1; i < M; i++) {
                 bitSets[0].and(bitSets[i]);
             }
+            ArrayList<Integer> resultList = new ArrayList<>();
+            for (int i = 0; i < N; i++) {
+                if (bitSets[0].get(i)) {
+                    resultList.add(i);
+                }
+            }
 
-            int[] result = bitSets[0].stream().toArray();
-
-            System.out.println(result.length);
-            System.out.println(Arrays.stream(result)
-                    .mapToObj(String::valueOf).collect(Collectors.joining(" ")));
+            System.out.println(resultList.size());
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < resultList.size(); i++) {
+                sb.append(resultList.get(i));
+                sb.append(" ");
+            }
+            sb.deleteCharAt(sb.length() - 1);
+            System.out.println(sb.toString());
         }
 
     }
