@@ -9,7 +9,6 @@ public class Test1 {
     static int count=n*n-1;
     public static void main(String[] args) {
 
-
         int[] array=new int[n*n];
         int len=array.length;
         if(n==1){
@@ -66,6 +65,4 @@ public class Test1 {
             }
         }
     }
-
-
 }
