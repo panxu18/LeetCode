@@ -1,7 +1,5 @@
 package xp.pan.tenxun;
 
-import com.sun.javafx.geom.Edge;
-
 import java.util.Scanner;
 
 /**

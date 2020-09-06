@@ -11,7 +11,10 @@ public class Test0906_4 {
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
         in.nextLine();
-        long[] arr = Arrays.stream(in.nextLine().split(" ")).mapToLong(Long::parseLong).toArray();
+        long[] arr = new long[N];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = in.nextLong();
+        }
         long[] sortedArr = Arrays.copyOf(arr, N);
         Arrays.sort(sortedArr);
         int index = (N - 1) >> 1; // 中位数索引
