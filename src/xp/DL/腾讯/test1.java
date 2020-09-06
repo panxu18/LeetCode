@@ -21,7 +21,11 @@ public class test1 {
         StringBuilder s = new StringBuilder();
         while (j <= l && k <= l) {
             if (a[j] == b[k]) {
-                s.append(a[j]).append(" ");
+                if (j == l || k == l) {
+                    s.append(a[j]);
+                } else {
+                    s.append(a[j]).append(" ");
+                }
                 j++;
                 k++;
             } else if (a[j] < b[k]) {

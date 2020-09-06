@@ -2,14 +2,13 @@ package xp.pan.tenxun;
 
 import java.util.Scanner;
 
-
 public class Test0906_2_1 {
 
-    static class Edge {
+    public static class E {
         int u, v;
-        Edge next;
+        E next;
 
-        public Edge(int u, int v, Edge next) {
+        public E(int u, int v, E next) {
             this.u = u;
             this.v = v;
             this.next = next;
@@ -17,7 +16,7 @@ public class Test0906_2_1 {
     }
 
     private static int MAXN = 100005;
-    private static Edge[] head = new Edge[MAXN];
+    private static E[] head = new E[MAXN];
     private static boolean used[] = new boolean[MAXN];
 
     public static void main(String[] args) {
@@ -30,8 +29,8 @@ public class Test0906_2_1 {
             int next = -1;
             for (int j = 1; j < k; j++) {
                 next = in.nextInt();
-                head[first] = new Edge(first, next, head[first]);
-                head[next] = new Edge(next, first, head[next]);
+                head[first] = new E(first, next, head[first]);
+                head[next] = new E(next, first, head[next]);
                 first = next;
             }
         }
@@ -41,7 +40,7 @@ public class Test0906_2_1 {
     private static int dfs(int root) {
         used[root] = true;
         int res = 1;
-        for (Edge e = head[root]; e != null; e = e.next) {
+        for (E e = head[root]; e != null; e = e.next) {
             if (!used[e.v]) {
                 res += dfs(e.v);
             }
