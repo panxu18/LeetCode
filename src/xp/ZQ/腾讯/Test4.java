@@ -10,8 +10,8 @@ public class Test4 {
         Long[] array=new Long[n];
         for(int i=0;i<array.length;i++){
             String temp=sc.next();
-            Long tem=Integer
-            array[i]=temp;
+            Long tem=Long.parseLong(temp);
+            array[i]=tem;
         }
         Arrays.sort(array);
         for(int i=0;i<n/2;i++){
