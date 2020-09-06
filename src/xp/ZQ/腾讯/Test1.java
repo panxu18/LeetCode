@@ -1,26 +1,28 @@
 package xp.ZQ.腾讯;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
-import java.util.HashSet;
 
 public class Test1 {
     public static void main(String[] args) {
+        HashMap<Integer,Integer> map = new HashMap<>();
+        ArrayList<Integer> list=new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        HashSet<Integer> set = new HashSet<>();
         for (int i = 0; i < n; i++) {
-            int temp = sc.nextInt();
-            set.add(temp);
+            int num = sc.nextInt();
+            map.put(num,1);
         }
         int m = sc.nextInt();
-        StringBuilder sb = new StringBuilder();
-
         for (int i = 0; i < m; i++) {
-            int temp2 = sc.nextInt();
-            if (set.contains(temp2)) {
-                sb.append(temp2 + " ");
+            int num = sc.nextInt();
+            if (map.containsKey(num)) {
+                list.add(num);
             }
         }
-        System.out.println(sb.toString());
+        for(int i=0;i<list.size();i++){
+            System.out.print(list.get(i)+" ");
+        }
     }
 }
