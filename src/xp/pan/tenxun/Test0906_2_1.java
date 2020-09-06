@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Test0906_2_1 {
 
     public static class E {
-        int u, v;
+        int v;
+        int u;
         E next;
 
         public E(int u, int v, E next) {
@@ -15,22 +16,22 @@ public class Test0906_2_1 {
         }
     }
 
-    private static int MAXN = 100005;
-    private static E[] head = new E[MAXN];
-    private static boolean used[] = new boolean[MAXN];
+    private static final int MAXI = 100001;
+    private static final E[] HEAD = new E[MAXI];
+    private static final boolean[] USED = new boolean[MAXI];
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int m = in.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
         for (int i = 0; i < m; i++) {
-            int k = in.nextInt();
-            int first = in.nextInt();
-            int next = -1;
+            int k = sc.nextInt();
+            int next = -2;
+            int first = sc.nextInt();
             for (int j = 1; j < k; j++) {
-                next = in.nextInt();
-                head[first] = new E(first, next, head[first]);
-                head[next] = new E(next, first, head[next]);
+                next = sc.nextInt();
+                HEAD[first] = new E(first, next, HEAD[first]);
+                HEAD[next] = new E(next, first, HEAD[next]);
                 first = next;
             }
         }
@@ -38,10 +39,10 @@ public class Test0906_2_1 {
     }
 
     private static int dfs(int root) {
-        used[root] = true;
+        USED[root] = true;
         int res = 1;
-        for (E e = head[root]; e != null; e = e.next) {
-            if (!used[e.v]) {
+        for (E e = HEAD[root]; e != null; e = e.next) {
+            if (!USED[e.v]) {
                 res += dfs(e.v);
             }
         }
