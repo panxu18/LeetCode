@@ -1,15 +1,9 @@
-package xp.pan.tenxun;
+package xp.PB.tengxun;
 
-import com.sun.javafx.geom.Edge;
 
 import java.util.Scanner;
 
-/**
- * 深搜
- * 使用邻接表构无向图，使用两条有向边表示
- */
-public class Test0906_2 {
-
+public class Test2 {
     static class Edge {
         int from, to;
         Edge next;
@@ -57,5 +51,4 @@ public class Test0906_2 {
         }
         return res;
     }
-
 }
