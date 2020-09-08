@@ -9,6 +9,11 @@ public class Test0908_2 {
         System.out.println(check(root) > -1);
     }
 
+
+    public int Test0908_2(){
+        return 1;
+    }
+
     /**
      * 使用后序遍历判断是否是完美二叉树
      * @param root 根节点
