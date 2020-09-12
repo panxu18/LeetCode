@@ -18,17 +18,17 @@ public class Test0912_4 {
         for (int i = 0; i < N; i++) {
             int from = in.nextInt();
             int to = in.nextInt();
-            addEdge(from, to);
+            addEdge(from + 1, to + 1);
         }
         System.out.println(binaryMatch());
 
     }
 
     private static int binaryMatch() {
-        Arrays.fill(match, -1);
+        Arrays.fill(match, 0);
         int res = 0;
-        for (int i = 0; i <= M + F; i++) {
-            if (match[i] == -1) {
+        for (int i = 1; i <= M + F + 1; i++) {
+            if (match[i] == 0) {
                 Arrays.fill(used, false);
                 if (dfs(i)) {
                     res++;
@@ -42,7 +42,7 @@ public class Test0912_4 {
         used[i] = true;
         for (Edge e = head[i]; e != null; e = e.next) {
             int w = match[e.to];
-            if (!used[w] && (w == -1 || dfs(w))) {
+            if (!used[w] && (w == 0 || dfs(w))) {
                 match[i] = e.to;
                 match[e.to] = i;
                 return true;
