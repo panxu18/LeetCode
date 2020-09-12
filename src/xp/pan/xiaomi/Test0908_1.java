@@ -16,10 +16,8 @@ public class Test0908_1 {
         if (str.length() < 8 || str.length() > 120) {
             return 1;
         }
-        if (!str.matches(".*\\d.*")
-                || !str.matches(".*[A-Z].*")
-                || !str.matches(".*[a-z].*")
-                || !str.matches(".*[^\\dA-Za-z].*")) {
+        if (!str.matches(".*[^\\dA-Za-z].*")||!str.matches(".*\\d.*") || !str.matches(".*[a-z].*") || !str.matches(".*[A-Z].*")
+                ) {
             return 2;
         }
         return 0;
