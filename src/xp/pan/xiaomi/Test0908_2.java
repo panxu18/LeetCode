@@ -8,6 +8,7 @@ public class Test0908_2 {
     private static int row = 3;
     private static int col = 4;
     public static void main(String[] args){
+
         Scanner in = new Scanner(System.in);
         charArr = in.nextLine().toCharArray();
         if (charArr.length == 0) {

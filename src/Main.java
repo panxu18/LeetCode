@@ -11,11 +11,6 @@ public class Main {
         }
         int[] arr = {};
         HashSet<Integer> set;
-
-
-
-
-
     }
 
     public static int revers(int i) {
