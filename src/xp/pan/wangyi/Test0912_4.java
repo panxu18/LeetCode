@@ -27,7 +27,7 @@ public class Test0912_4 {
     private static int binaryMatch() {
         Arrays.fill(match, 0);
         int res = 0;
-        for (int i = 1; i <= M + F + 1; i++) {
+        for (int i = 1; i <= M + F; i++) {
             if (match[i] == 0) {
                 Arrays.fill(used, false);
                 if (dfs(i)) {
