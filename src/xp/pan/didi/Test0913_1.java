@@ -2,6 +2,9 @@ package xp.pan.didi;
 
 import java.util.Scanner;
 
+/**
+ * 字符串反转，给定N表示，每N个字符进行反转。
+ */
 public class Test0913_1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -12,7 +15,7 @@ public class Test0913_1 {
         StringBuilder ans = new StringBuilder();
         while (start < str.length()) {
             StringBuilder sb = new StringBuilder(str.substring(start, Math.min(str.length(), start + n)));
-            ans.append(sb.reverse().toString());
+            ans.append(sb.reverse());
             start += n;
         }
         System.out.println(ans);
