@@ -1,4 +1,4 @@
-package xp.pan;
+package xp.pan.duxiaoman;
 
 import java.util.Arrays;
 import java.util.LinkedList;
