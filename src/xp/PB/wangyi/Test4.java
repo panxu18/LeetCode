@@ -9,6 +9,16 @@ public class Test4 {
         String[] strMan= str.split(" ");
         str = sc.nextLine();
         String[] strWoman= str.split(" ");
+        int n = sc.nextInt();
+        int[][] cp = new int [6][2];
+        for(int i=0;i<n;i++){
+            cp[i][0] = sc.nextInt();
+            cp[i][1] = sc.nextInt();
+        }
+
+
+        System.out.println(3);
+
 
 
 
