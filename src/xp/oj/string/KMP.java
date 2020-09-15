@@ -1,5 +1,7 @@
 package xp.oj.string;
 
+import java.util.Scanner;
+
 import static java.lang.Math.max;
 
 /**
@@ -7,58 +9,56 @@ import static java.lang.Math.max;
  */
 public class KMP {
 
-    final String patternString;
-    final int[] next;
-    private char[] chars;
-
-    public KMP(String patternString) {
-        this.patternString = patternString;
-        this.chars = patternString.toCharArray();
-        this.next = new int[patternString.length()];
-        build();
-    }
-
-    private void build() {
-        next[0] = patternString.length();
-        int len=0, pos = 1;
-        while (pos+1 < patternString.length() && chars[pos+len] == chars[len]) {
-            len++;
-        }
-        next[pos] = len;
-        for (int i = 2; i < patternString.length(); i++) {
-            if (next[i-pos] + i < next[pos] + pos) {
-                next[i] = next[i-pos];
+    private static int[] getNext(char[] charArr) {
+        int[] next = new int[charArr.length];
+        next[0] = -1;
+        int i = 0, j = -1;
+        while (i < charArr.length - 1) {
+            if (j >= 0 && charArr[i] != charArr[j]) {
+                j = next[j];
+                continue;
+            }
+            if (charArr[++i] == charArr[++j]) {
+                next[i] = next[j];
             } else {
-                len = max(0, next[pos] + pos - i);
-                while (i + len < patternString.length() && chars[i+len] == chars[len]){
-                    len++;
-                }
-                next[i] = len;
-                pos = i;
+                next[i] = j;
             }
         }
+        return next;
     }
 
-    public int[] match(String str){
-        char[] chars2 = str.toCharArray();
-        int[] res = new int[str.length()];
-        int pos = 0, len = 0;
-        while (len < patternString.length() && len < str.length() && chars2[pos] == chars[len]){
-            len++;
-        }
-        res[pos] = len;
-        for (int i = 1; i < str.length(); i++) {
-            if (next[i-pos] + i < res[pos] + pos){
-                res[i] = next[i - pos];
+    private static int search(char[] source, char[] pattern, int[] next) {
+        int i = 0, j = 0;
+        while (i < source.length && j < pattern.length) {
+            if (j == -1 || source[i] == pattern[j]) {
+                i++;j++;
             } else {
-                len = max(0, res[pos] + pos - i);
-                while (i + len < str.length() && len < patternString.length() && chars2[i + len] == chars[len]){
-                    len++;
-                }
-                res[i] = len;
-                pos = i;
+                j = next[j];
             }
         }
-        return res;
+        if (j >= pattern.length) {
+            return i - pattern.length;
+        } else {
+            return -1;
+        }
+    }
+
+    public static int kmp(String source, String pattern) {
+        char[] sourceArr = source.toCharArray();
+        char[] patternArr = pattern.toCharArray();
+        if (sourceArr.length < patternArr.length) {
+            char[] temp = sourceArr;
+            sourceArr = patternArr;
+            patternArr = temp;
+        }
+        int[] next = getNext(patternArr);
+        return search(sourceArr, patternArr, next);
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String source = in.nextLine();
+        String pattern = in.nextLine();
+        System.out.println(kmp(source, pattern));
     }
 }
