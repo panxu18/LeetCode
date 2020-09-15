@@ -1,12 +1,11 @@
-package xp.pan;
+package xp.pan.shenzhouxinxi;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class Test0915_2 {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8,9};
-        int offset = 2;
+        int offset = 9;
         Arrays.stream(new Test0915_2().pushIntArray(arr, offset)).forEach(System.out::println);
     }
 
