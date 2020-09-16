@@ -8,39 +8,38 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Test0916_2 {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int[] seq = Arrays.stream(in.nextLine().split(" "))
                 .mapToInt(Integer::parseInt).toArray();
         int bugs1 = in.nextInt();
         int bugs2 = in.nextInt();
-        Stack<Integer> path1 = new Stack<>();
+
+        ArrayList<Integer> path1 = new ArrayList<>();
+        path.clear();
         find(seq, 0, bugs1, path1);
-        Stack<Integer> path2 = new Stack<>();
+        ArrayList<Integer> path2 = new ArrayList<>();
+        path.clear();
         find(seq, 0, bugs2, path2);
 //        System.out.println(path1.stream().map(String::valueOf).collect(Collectors.joining(" ")));
 //        System.out.println(path2.stream().map(String::valueOf).collect(Collectors.joining(" ")));
-        while (path1.size() != path2.size()) {
-            if (path1.size() > path2.size()) {
-                path1.pop();
-            } else {
-                path2.pop();
-            }
-        }
-        System.out.println(path1.peek());
+        int dep = Math.min(path1.size(), path2.size());
+        System.out.println(path1.get(dep - 1));
     }
 
-    private static int find(int[] seq, int root, int id, Stack<Integer> path) {
+    private static Stack<Integer> path = new Stack<>();
+    private static int find(int[] seq, int root, int id, ArrayList<Integer> result) {
         if (seq[root] == -1) {
             return 1;
         }
         int sum = 1;
         path.push(seq[root]);
         if (seq[root] == id) {
-            return sum;
+            result.addAll(path);
         }
-        sum += find(seq, root + sum, id, path);
-        sum += find(seq, root + sum, id, path);
+        sum += find(seq, root + sum, id, result);
+        sum += find(seq, root + sum, id, result);
         path.pop();
         return sum;
     }
