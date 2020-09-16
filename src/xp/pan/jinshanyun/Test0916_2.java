@@ -22,10 +22,15 @@ public class Test0916_2 {
         ArrayList<Integer> path2 = new ArrayList<>();
         path.clear();
         find(seq, 0, bugs2, path2);
-//        System.out.println(path1.stream().map(String::valueOf).collect(Collectors.joining(" ")));
-//        System.out.println(path2.stream().map(String::valueOf).collect(Collectors.joining(" ")));
-        int dep = Math.min(path1.size(), path2.size());
-        System.out.println(path1.get(dep - 1));
+        System.out.println(path1.stream().map(String::valueOf).collect(Collectors.joining(" ")));
+        System.out.println(path2.stream().map(String::valueOf).collect(Collectors.joining(" ")));
+        int ans = -1;
+        int i = 0;
+        while (path1.get(i) == path2.get(i)) {
+            i++;
+        }
+
+        System.out.println(path1.get(i - 1));
     }
 
     private static Stack<Integer> path = new Stack<>();
