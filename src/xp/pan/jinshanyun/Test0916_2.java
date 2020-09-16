@@ -26,7 +26,7 @@ public class Test0916_2 {
         System.out.println(path2.stream().map(String::valueOf).collect(Collectors.joining(" ")));
         int ans = -1;
         int i = 0;
-        while (path1.get(i) == path2.get(i)) {
+        while (i < path1.size() && i < path2.size() && path1.get(i) == path2.get(i)) {
             i++;
         }
 
