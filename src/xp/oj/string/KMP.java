@@ -9,31 +9,30 @@ import static java.lang.Math.max;
  */
 public class KMP {
 
-    private static int[] getNext(char[] charArr) {
-        int[] next = new int[charArr.length];
-        next[0] = -1;
-        int i = 0, j = -1;
-        while (i < charArr.length - 1) {
-            if (j >= 0 && charArr[i] != charArr[j]) {
-                j = next[j];
-                continue;
+    private static int[] getFail(char[] charArr) {
+        int[] fail = new int[charArr.length];
+        fail[0] = -1;
+        for (int i = 0; i < charArr.length - 1; i++) {
+            int j = fail[i];
+            while (j >= 0 && charArr[i] != charArr[j]) {
+                j = fail[j];
             }
-            if (charArr[++i] == charArr[++j]) {
-                next[i] = next[j];
+            if (charArr[i + 1] == charArr[j + 1]) {
+                fail[i + 1] = fail[j + 1];
             } else {
-                next[i] = j;
+                fail[i + 1] = j + 1;
             }
         }
-        return next;
+        return fail;
     }
 
-    private static int search(char[] source, char[] pattern, int[] next) {
+    private static int search(char[] source, char[] pattern, int[] fail) {
         int i = 0, j = 0;
         while (i < source.length && j < pattern.length) {
-            if (j == -1 || source[i] == pattern[j]) {
-                i++;j++;
+            if (j >= 0 && source[i] != pattern[j]) {
+                j = fail[j];
             } else {
-                j = next[j];
+                i++; j++;
             }
         }
         if (j >= pattern.length) {
@@ -51,14 +50,19 @@ public class KMP {
             sourceArr = patternArr;
             patternArr = temp;
         }
-        int[] next = getNext(patternArr);
-        return search(sourceArr, patternArr, next);
+        int[] prefix = getFail(patternArr);
+        return search(sourceArr, patternArr, prefix);
     }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        String source = in.nextLine();
-        String pattern = in.nextLine();
-        System.out.println(kmp(source, pattern));
+        int T = in.nextInt();
+        in.nextLine();
+        for (int i = 0; i < T; i++) {
+            String source = in.nextLine();
+            String pattern = in.nextLine();
+            System.out.println(kmp(source, pattern));
+        }
+
     }
 }
