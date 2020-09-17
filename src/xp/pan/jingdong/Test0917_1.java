@@ -19,7 +19,11 @@ public class Test0917_1 {
         Matcher matcher = pattern.matcher(sb.toString());
         ArrayList<Integer> ansList = new ArrayList<>();
         while (matcher.find()) {
-            int year = Integer.parseInt(matcher.group());
+            String s = matcher.group();
+            if (s.length() > 4) {
+                continue;
+            }
+            int year = Integer.parseInt(s);
             if (year >= 1000 && year <= 3999){
                 ansList.add(year);
             }
