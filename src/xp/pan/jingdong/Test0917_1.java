@@ -9,9 +9,14 @@ import java.util.stream.Collectors;
 public class Test0917_1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        String str = in.nextLine();
+        StringBuilder sb = new StringBuilder();
+        while (in.hasNext()) {
+            String str = in.nextLine();
+            sb.append(str);
+            sb.append("\n");
+        }
         Pattern pattern = Pattern.compile("\\d+");
-        Matcher matcher = pattern.matcher(str);
+        Matcher matcher = pattern.matcher(sb.toString());
         ArrayList<Integer> ansList = new ArrayList<>();
         while (matcher.find()) {
             int year = Integer.parseInt(matcher.group());
