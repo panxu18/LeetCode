@@ -1,5 +1,6 @@
 package xp.pan.jinshanyun;
 
+import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -43,4 +44,5 @@ public class Test0916_2 {
         path.pop();
         return sum;
     }
+
 }

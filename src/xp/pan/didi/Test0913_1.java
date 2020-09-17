@@ -1,5 +1,7 @@
 package xp.pan.didi;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -10,6 +12,7 @@ public class Test0913_1 {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         in.nextLine();
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String str = in.nextLine();
         int start = 0;
         StringBuilder ans = new StringBuilder();

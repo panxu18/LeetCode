@@ -1,6 +1,7 @@
 package xp.pan.wangyi;
 
 import java.util.Scanner;
+import java.util.concurrent.BlockingDeque;
 
 public class Test0912_3 {
     public static void main(String[] args) {
@@ -26,5 +27,7 @@ public class Test0912_3 {
         } else {
             System.out.println(Math.min(N, 1 + maxDepth + ((K - maxDepth) >> 1)));
         }
+
     }
+
 }

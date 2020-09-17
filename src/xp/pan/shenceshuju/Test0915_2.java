@@ -18,5 +18,17 @@ public class Test0915_2 {
         str = str.replaceAll("\\n\\s*","\n");
         str = str.replaceAll("\\s*\\n","\n");
         System.out.println(str);
+
+        System.out.println("Hallo, dies ist eine ziemlich lange Zeile, die in Html aber nicht umgebrochen");
+        System.out.println("wird.");
+        System.out.println("Zwei");
+        System.out.println();
+        System.out.println("produzieren zwei Newlines. Es gibt auch noch das tag");
+        System.out.println("--------------------------------------------------------------------------------");
+        System.out.println("was einen Trenner darstellt. Zwei");
+        System.out.println("--------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------");
+        System.out.println("produzieren zwei Horizontal Rulers. Achtung mehrere Leerzeichen irritieren Html");
+        System.out.println("genauso wenig wie mehrere Leerzeilen.");
     }
 }
