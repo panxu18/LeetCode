@@ -1,12 +1,14 @@
 package xp.PB.jindong;
 
 
+import com.sun.org.apache.xpath.internal.operations.And;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class test1 {
-
+//    And millionaires will hold 46% of total wealth by 2019, the report says. This ratio is likely to increase in 2020.
     public static void main(String[] args) {
         String str;
         Scanner scan = new Scanner(System.in);
