@@ -8,6 +8,13 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+/**
+ * 贪心，优先队列
+ *
+ * 给你n头牛挤奶的时间段，同一时间同一栏内只能有一只牛问最少需要几个栏。并输出每头牛挤奶时所在的栏编号；
+ * 按照奶牛占用的时间端的开始时间升序排列，按顺序为奶牛安排牛栏，同时将牛栏按照使用结束时间排序，如果无法为奶牛安排空闲的牛栏，
+ * 就新增一个牛栏。如果有空闲牛栏就为其安排空闲牛栏。
+ */
 public class StallReservations3190 {
 
     public static void main(String[] args) throws IOException {

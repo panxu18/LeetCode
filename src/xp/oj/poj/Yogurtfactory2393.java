@@ -6,6 +6,12 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
+/**
+ * 贪心
+ *
+ * 贪心策略是维持每周的最低单位成本，每周可能用上周剩下的，也可能生产新的。于是该周单位成本可能为上一周的单位成本加上储存费，
+ * 也可能为该周的单位成本。
+ */
 public class Yogurtfactory2393 {
 
     public static void main(String[] args) throws IOException {
