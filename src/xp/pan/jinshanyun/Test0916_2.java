@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Test0916_2 {
 
@@ -22,8 +21,8 @@ public class Test0916_2 {
         ArrayList<Integer> path2 = new ArrayList<>();
         path.clear();
         find(seq, 0, bugs2, path2);
-//        System.out.println(path1.stream().map(String::valueOf).collect(Collectors.joining(" ")));
-//        System.out.println(path2.stream().map(String::valueOf).collect(Collectors.joining(" ")));
+        System.out.println(path1.stream().map(String::valueOf).collect(Collectors.joining(" ")));
+        System.out.println(path2.stream().map(String::valueOf).collect(Collectors.joining(" ")));
         int i = 0;
         while (i < path1.size() && i < path2.size() && path1.get(i) == path2.get(i)) {
             i++;
@@ -34,9 +33,6 @@ public class Test0916_2 {
 
     private static Stack<Integer> path = new Stack<>();
     private static int find(int[] seq, int root, int id, ArrayList<Integer> result) {
-        if (seq[root] == -1) {
-            return 1;
-        }
         int sum = 1;
         path.push(seq[root]);
         if (seq[root] == id) {
