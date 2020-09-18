@@ -8,6 +8,7 @@ import java.util.Scanner;
  * 螺旋数组
  */
 public class Test2 {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         long[][] ans = new long[9][9];
@@ -19,7 +20,7 @@ public class Test2 {
         int y1 = 0;
         int x2 = n - 1;
         int y2 = n - 1;
-        for (;cnt <= limit && x1<=x2 && y1<=y2;) {
+        for (;cnt <= limit && x1<= x2 && y1<=y2;) {
 
             int x = x1;
             int y = y1;
@@ -48,7 +49,7 @@ public class Test2 {
             }
             x1 += 1;
             y1+=1;
-            x2-=1;
+            x2 -=1;
             y2-=1;
         }
 
