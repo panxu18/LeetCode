@@ -9,19 +9,41 @@ import static java.lang.Math.max;
  */
 public class KMP {
 
-    private static int[] getFail(char[] charArr) {
-        int[] fail = new int[charArr.length];
+    /**
+     * 计算公共前后缀
+     */
+    private int[] getPrefix(char[] arr) {
+        int[] fail = new int[arr.length];
+        int[] prefix = new int[arr.length];
         fail[0] = -1;
-        for (int i = 0; i < charArr.length - 1; i++) {
-            int j = fail[i];
-            while (j >= 0 && charArr[i] != charArr[j]) {
+        int j = -1;
+        for (int i = 0; i < arr.length - 1; i++) {
+            while (j != -1 && arr[i] != arr[j]) {
                 j = fail[j];
             }
-            if (charArr[i + 1] == charArr[j + 1]) {
-                fail[i + 1] = fail[j + 1];
-            } else {
-                fail[i + 1] = j + 1;
+            prefix[i] = j;
+            fail[i + 1] = arr[i + 1] == arr[++j] ? fail[j] : j;
+        }
+        // 计算prefix[arr.length-1]
+        while (j != -1 && arr[arr.length - 1] != arr[j]) {
+            j = fail[j];
+        }
+        prefix[arr.length - 1] = j;
+        return prefix;
+    }
+
+    /**
+     * 计算失败指针
+     */
+    private static int[] getFail(char[] arr) {
+        int[] fail = new int[arr.length];
+        fail[0] = -1;
+        int j = -1;
+        for (int i = 0; i < arr.length - 1; i++) {
+            while (j != -1 && arr[i] != arr[j]) {
+                j = fail[j];
             }
+            fail[i + 1] = arr[i + 1] == arr[j] ? fail[j] : j;
         }
         return fail;
     }
