@@ -1,4 +1,4 @@
-package xp.ld;
+package xp.leetcode;
 
 public class LeetCode73 {
     public void setZeroes(int[][] matrix) {

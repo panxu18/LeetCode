@@ -1,4 +1,4 @@
-package xp.ld;
+package xp.leetcode;
 
 public class LeetCode289 {
     private static int[][] dets = new int[][]{{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};
