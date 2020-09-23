@@ -1,4 +1,4 @@
-package xp.ld;
+package xp.leetcode;
 
 public class LeetCode004 {
 

@@ -1,6 +1,5 @@
-package xp.ld;
+package xp.leetcode;
 
-import java.util.Arrays;
 import java.util.Stack;
 
 public class Lanqiao3 {

@@ -1,8 +1,6 @@
-package xp.ld;
+package xp.leetcode;
 
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 
 public class LeetCode001 {
     public int[] twoSum(int[] nums, int target) {

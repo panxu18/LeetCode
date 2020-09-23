@@ -1,6 +1,4 @@
-package xp.ld;
-
-import java.util.ArrayList;
+package xp.leetcode;
 
 public class LeetCode042 {
 
