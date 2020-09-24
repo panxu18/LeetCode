@@ -1,6 +1,7 @@
 package xp.pan;
 
 import java.io.*;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Sudoku {
@@ -9,15 +10,14 @@ public class Sudoku {
         new Sudoku().solve();
     }
 
-    InputReader in = new InputReader(System.in);
-    PrintWriter out = new PrintWriter(System.out);
-
     int[][] map = new int[10][10];
     boolean[][] row = new boolean[10][10];
     boolean[][] col = new boolean[10][10];
     boolean[][] grid = new boolean[10][10];
-    private void solve() {
 
+    private void solve() {
+        Scanner in = new Scanner(System.in);
+        PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
         for (int i = 0; i < n; i++) {
             map = new int[10][10];
@@ -26,7 +26,7 @@ public class Sudoku {
             grid = new boolean[10][10];
 
             for (int j = 1; j < 10; j++) {
-                char[] charArr = in.readLine().toCharArray();
+                char[] charArr = in.nextLine().toCharArray();
                 for (int k = 1; k < 10; k++) {
                     int q = charArr[k - 1] - '0';
                     if (q != 0) {
@@ -78,48 +78,4 @@ public class Sudoku {
         return false;
 
     }
-
-    class InputReader{
-        BufferedReader bf;
-        StringTokenizer tokenizer;
-
-        InputReader(InputStream stream) {
-            bf = new BufferedReader(new InputStreamReader(stream));
-            tokenizer = new StringTokenizer("");
-        }
-
-        int nextInt() {
-            return Integer.parseInt(next());
-        }
-
-        private String next() {
-            if (hasNext()) {
-                return tokenizer.nextToken();
-            }
-            return null;
-        }
-
-        private boolean hasNext() {
-            while (!tokenizer.hasMoreTokens()) {
-                String s;
-                try {
-                    s = bf.readLine();
-                } catch (IOException e) {
-                    return false;
-                }
-                tokenizer = new StringTokenizer(s);
-            }
-            return true;
-        }
-
-        private String readLine() {
-            try {
-                return bf.readLine();
-            } catch (IOException e) {
-                return null;
-            }
-        }
-    }
-
-
 }
