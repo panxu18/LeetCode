@@ -16,12 +16,12 @@ public class Main {
             tool.put('x', 0);
             tool.put('y', 0);
             tool.put('z', 0);
-            boolean[] isTure = new boolean[str.length()];
+            //boolean[] isTure = new boolean[str.length()];
             int max = 0;
             for(int i=j;i<str.length();i++){
                 tool.put(str.charAt(i),tool.get(str.charAt(i))==null?1:tool.get(str.charAt(i))+1);
                 if(check(tool)){
-                    isTure[i] = true;
+                    //isTure[i] = true;
                     max = i-j+1;
                 }
             }

@@ -23,7 +23,7 @@ public class Test0915_3 {
         str = str.replaceAll("<br>", "\n");
         str = str.replaceAll("<hr>", "\n" + line.toString() + "\n");
         Arrays.stream(str.split("\n"))
-                .map(Function.identity());
+                .map(a->a);
         System.out.println(str);
     }
 }
