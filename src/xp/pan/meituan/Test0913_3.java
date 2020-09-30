@@ -21,16 +21,18 @@ public class Test0913_3 {
         int N = in.nextInt();
         int K = in.nextInt();
         int D = in.nextInt();
-        System.out.println(solve(N, K) - solve(N,D - 1));
+        System.out.println(solve(N, K) - solve(N, D - 1));
     }
 
     private static int solve(int n, int k) {
         Arrays.fill(dp, 0);
-        dp[0] = dp[1] = 1;
-        for (int i = 2; i <= n; i++) {
-            dp[i] = dp[i - 1] << 1 % mod;
-            if (i - k - 1 >= 0) {
-                dp[i] -= dp[i - k - 1];
+        dp[0] = 1;
+        int preSum = 1;
+        for (int i = 1; i <= n; i++) {
+            dp[i] = preSum;
+            preSum <<= 1;
+            if (i - k + 1 >= 0) {
+                preSum -= dp[i - k + 1];
             }
         }
         return dp[n];
