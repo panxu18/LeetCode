@@ -23,5 +23,4 @@ public class Test0913_1 {
         }
         System.out.println(sb.length() > 0 ? sb : "empty");
     }
-
 }

@@ -14,7 +14,6 @@ public class Test0912_3 {
         }
         int maxDepth = 0;
         for (int i = 1; i < N; i++) {
-
             int dep = 0;
             int p = i;
             do {
@@ -25,7 +24,7 @@ public class Test0912_3 {
         if (maxDepth >= K) {
             System.out.println(K + 1);
         } else {
-            System.out.println(Math.min(N, 1 + maxDepth + ((K - maxDepth) >> 1)));
+            System.out.println(Math.min(N, 1 + maxDepth + ((K - maxDepth))>>1));
         }
 
     }

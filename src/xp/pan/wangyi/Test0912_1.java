@@ -10,7 +10,9 @@ public class Test0912_1 {
 
     private static int nextInt() throws IOException {
         in.nextToken();
+
         return (int) in.nval;
+
     }
 
     public static void main(String[] args) throws IOException {
@@ -36,6 +38,5 @@ public class Test0912_1 {
             }
         }
         System.out.println(ans);
-
     }
 }

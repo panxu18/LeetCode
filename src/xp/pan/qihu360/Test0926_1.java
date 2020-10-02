@@ -21,7 +21,7 @@ public class Test0926_1 {
         if (a <= 0) {
             return 0;
         }
-        int cnt = Math.min(b, k - 1);
+        int cnt = Math.min(b, k-1);
         a -= (cnt + 1) * v;
         b -= cnt;
         return solve(a, b, k, v) + 1;

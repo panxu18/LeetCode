@@ -1,6 +1,7 @@
 package xp.pan.wangyi;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Test0912_4 {
@@ -52,7 +53,8 @@ public class Test0912_4 {
     }
 
     private static void addEdge(int from, int to) {
-        head[from] = new Edge(from, to, head[from]);
+        Edge next = head[from];
+        head[from] = new Edge(from, to, next);
     }
 
     static class Edge{
@@ -64,4 +66,5 @@ public class Test0912_4 {
             this.next = next;
         }
     }
+
 }
