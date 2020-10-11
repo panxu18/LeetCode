@@ -18,8 +18,8 @@ public class Test1010_3 {
 
     public static int checkNetSegmet(String mask, String ip1, String ip2) {
         int[] maskArr = Arrays.stream(mask.split("\\.")).mapToInt(Integer::parseInt).toArray();
-        int[] ip1Arr = Arrays.stream(mask.split("\\.")).mapToInt(Integer::parseInt).toArray();
-        int[] ip2Arr = Arrays.stream(mask.split("\\.")).mapToInt(Integer::parseInt).toArray();
+        int[] ip1Arr = Arrays.stream(ip1.split("\\.")).mapToInt(Integer::parseInt).toArray();
+        int[] ip2Arr = Arrays.stream(ip2.split("\\.")).mapToInt(Integer::parseInt).toArray();
         if (!checkMask(maskArr) || !checkIp(ip1Arr) || !checkIp(ip2Arr)) {
             return 1;
         }
