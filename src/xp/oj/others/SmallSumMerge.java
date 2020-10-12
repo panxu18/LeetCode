@@ -9,46 +9,44 @@ public class SmallSumMerge {
         System.out.println(smallSum(arr));
     }
 
-    private static int smallSum(int[] arr) {
+    private static long smallSum(int[] arr) {
         if (arr == null || arr.length <= 1) {
             return 0;
         }
-        int[] temp = new int[arr.length];
-        return mergeSort(arr, 0, arr.length, temp);
+        temp = new int[arr.length];
+        long ans =  mergeSort(arr, 0, arr.length - 1);
+        return ans;
     }
 
-    private static int mergeSort(int[] source, int fromIndex, int toIndex, int[] temp) {
-        if (fromIndex + 1 >= toIndex) {
+    private static int[] temp;
+
+    private static long mergeSort(int[] arr, int s, int t) {
+        if (s == t) {
             return 0;
         }
-        int mid = (fromIndex + toIndex) >> 1;
-        int sum = mergeSort(source, fromIndex, mid, temp);
-        sum += mergeSort(source, mid, toIndex, temp);
-        return sum + merge(source, fromIndex, toIndex, temp);
-    }
+        int mid = (s + t) >> 1;
+        long res = 0;
+        res += mergeSort(arr, s, mid);
+        res += mergeSort(arr, mid + 1, t);
 
-    private static int merge(int[] source, int fromIndex, int toIndex, int[] temp) {
-        int mid = (fromIndex + toIndex) >> 1;
-        int leftIndex = fromIndex, rightIndex = mid;
-        int tempIndex = fromIndex;
-        int sum = 0;
-        while (leftIndex < mid && rightIndex < toIndex) {
-            if (source[leftIndex] <= source[rightIndex]) {
-                temp[tempIndex++] = source[leftIndex];
-                sum += source[leftIndex] * (toIndex - rightIndex);
-                leftIndex++;
+        int k = s;
+        int left = s;
+        int right = mid + 1;
+        while (left <= mid && right <= t) {
+            if (arr[left] <= arr[right]) {
+                res += arr[left] * (t - right + 1);
+                temp[k++] = arr[left++];
             } else {
-                temp[tempIndex++] = source[rightIndex++];
+                res +=
+                temp[k++] = arr[right++];
             }
         }
-        int restIndex = leftIndex < mid ? leftIndex : rightIndex;
-        while (tempIndex < toIndex) {
-            temp[tempIndex++] = source[restIndex++];
+        if (left <= mid) {
+            System.arraycopy(arr, left, temp, k, mid - left + 1);
+        } else {
+            System.arraycopy(arr, right, temp, k, t - right + 1);
         }
-        // copy back to source
-        for (int i = fromIndex; i < toIndex; i++) {
-            source[i] = temp[i];
-        }
-        return sum;
+        System.arraycopy(temp, s, arr, s, t - s + 1);
+        return res;
     }
 }
